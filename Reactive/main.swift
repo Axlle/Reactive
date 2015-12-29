@@ -8,17 +8,20 @@
 
 import Foundation
 
-var signal: Signal = Signal(initialValue: 5)
-//var stream: Stream = Stream()
-//
-//// MARK: Signal
-//
-//print("Initial value is \(signal.value)")
-signal.updateStream.addObserver() { (event: SignalUpdateEvent<Int>) in
-    print("Value is now \(event.value)")
+var signal1 = Signal(initialValue: 1.0)
+signal1.stream.addObserver() { event in
+    print("Stream1 value is now \(event.value)")
 }
-//
-signal.value = 5
+
+var signal2 = Signal(initialValue: 1.1)
+signal2.stream.addObserver { event in
+    print("Stream2 value is not \(event.value)")
+}
+
+signal1.connectTakingTheirs(signal2)
+
+signal2.value = 1.2
+signal1.value = 0.9
 
 // MARK: - Stream
 

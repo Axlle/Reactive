@@ -16,7 +16,7 @@ import Foundation
 class Signal<T> : NSObject {
 
     var group: SignalGroup<T> // Underlying value
-    let updateStream = Stream<SignalUpdateEvent<T>>()
+    let stream = Stream<SignalEvent<T>>()
 
     var value: T {
         get {
@@ -34,27 +34,33 @@ class Signal<T> : NSObject {
     }
 
     func connectTakingTheirs(signal: Signal<T>) {
-        guard signal.group == self.group else { return }
+        guard signal.group != self.group else { return }
 
-//        self.underlyingStore
+        let newGroup = signal.group
+        let oldGroup = self.group
+
+        // Move to new group (this will modify self.group)
+        for ourSignal in oldGroup.signals.allObjects as! [Signal<T>] {
+            ourSignal.group = newGroup
+            newGroup.add(ourSignal)
+        }
+
+        // Post update to our signals
+        oldGroup.value = newGroup.value
     }
 
-    func groupValueDidChange(value: T, oldValue: T) {
-        let event = SignalUpdateEvent(value: value, oldValue: oldValue)
-        self.updateStream.send(event)
+    func sendEvent(event: SignalEvent<T>) {
+        self.stream.send(event)
     }
 }
-
 
 class SignalGroup<T> : NSObject {
 
     var signals = NSHashTable.weakObjectsHashTable()
     var value: T {
         didSet {
-            for object in self.signals.allObjects {
-                let signal = object as! Signal<T>
-                signal.groupValueDidChange(value, oldValue: oldValue)
-            }
+            let event = SignalEvent(value: value, oldValue: oldValue)
+            self.sendEvent(event)
         }
     }
 
@@ -69,9 +75,20 @@ class SignalGroup<T> : NSObject {
     func remove(signal: Signal<T>) {
         self.signals.removeObject(signal)
     }
+
+    func removeAllSignals() {
+        self.signals.removeAllObjects()
+    }
+
+    func sendEvent(event: SignalEvent<T>) {
+        for object in self.signals.allObjects {
+            let signal = object as! Signal<T>
+            signal.sendEvent(event)
+        }
+    }
 }
 
-struct SignalUpdateEvent<T> {
+struct SignalEvent<T> {
     let value: T
     let oldValue: T
 }

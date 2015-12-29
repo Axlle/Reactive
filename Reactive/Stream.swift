@@ -11,14 +11,15 @@ import Foundation
 /// Stream
 ///
 /// A stream is a series of events that can be observed.
-class Stream<EventType> {
+///
+class Stream<Event> {
 
-    typealias Observer = EventType -> Void
+    typealias Observer = Event -> Void
 
     // TODO: remove unused observers
     var observers: [Observer] = []
 
-    func send(event: EventType) {
+    func send(event: Event) {
         for observer in self.observers {
             observer(event)
         }
