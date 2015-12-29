@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D04ABD51C2F869900D1B496 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D04ABD41C2F869900D1B496 /* main.swift */; };
 		3D04ABDC1C2F86B100D1B496 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D04ABDB1C2F86B100D1B496 /* Reactive.swift */; };
+		3D04ABDF1C31B60400D1B496 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D04ABDE1C31B60400D1B496 /* Stream.swift */; };
+		3D04ABE11C31B60F00D1B496 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D04ABE01C31B60F00D1B496 /* Signal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,8 @@
 		3D04ABD11C2F869900D1B496 /* Reactive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Reactive; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D04ABD41C2F869900D1B496 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3D04ABDB1C2F86B100D1B496 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		3D04ABDE1C31B60400D1B496 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		3D04ABE01C31B60F00D1B496 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				3D04ABDB1C2F86B100D1B496 /* Reactive.swift */,
+				3D04ABDE1C31B60400D1B496 /* Stream.swift */,
+				3D04ABE01C31B60F00D1B496 /* Signal.swift */,
 				3D04ABD41C2F869900D1B496 /* main.swift */,
 			);
 			path = Reactive;
@@ -123,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D04ABDC1C2F86B100D1B496 /* Reactive.swift in Sources */,
+				3D04ABE11C31B60F00D1B496 /* Signal.swift in Sources */,
+				3D04ABDF1C31B60400D1B496 /* Stream.swift in Sources */,
 				3D04ABD51C2F869900D1B496 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
