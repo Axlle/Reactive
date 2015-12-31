@@ -9,19 +9,21 @@
 import Foundation
 
 var signal1 = Signal(initialValue: 1.0)
-signal1.stream.addObserver() { event in
+signal1.stream.observe { event in
     print("Stream1 value is now \(event.value)")
 }
 
 var signal2 = Signal(initialValue: 1.1)
-signal2.stream.addObserver { event in
-    print("Stream2 value is not \(event.value)")
+signal2.stream.addKeyedObserver("hello") { event in
+    print("Stream2 value is now \(event.value)")
 }
 
-signal1.connectTakingTheirs(signal2)
+signal1.connectTo(signal2)
 
 signal2.value = 1.2
 signal1.value = 0.9
+
+print("signal1 = \(signal1)")
 
 // MARK: - Stream
 

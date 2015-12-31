@@ -13,12 +13,14 @@ import Foundation
 /// A signal is a value that can be observed. It acts like a variable except that signals
 /// can be connected so they share the same value (like connecting physical wires).
 ///
-class Signal<T> : NSObject {
+public class Signal<T> : NSObject {
 
     var group: SignalGroup<T> // Underlying value
-    let stream = Stream<SignalEvent<T>>()
+    var connection: Signal<T>?
+    let connectees = NSHashTable.weakObjectsHashTable()
+    public let stream = Stream<SignalEvent<T>>()
 
-    var value: T {
+    public var value: T {
         get {
             return self.group.value
         }
@@ -27,36 +29,46 @@ class Signal<T> : NSObject {
         }
     }
 
-    init(initialValue iv: T) {
+    public init(initialValue iv: T) {
         self.group = SignalGroup(initialValue: iv)
         super.init()
-        self.group.add(self)
+        self.group.signals.addObject(self)
     }
 
-    func connectTakingTheirs(signal: Signal<T>) {
+    /// Take theirs policy
+    public func connectTo(signal: Signal<T>) {
         guard signal.group != self.group else { return }
 
         let newGroup = signal.group
         let oldGroup = self.group
 
         // Move to new group (this will modify self.group)
-        for ourSignal in oldGroup.signals.allObjects as! [Signal<T>] {
+        for ourSignal in oldGroup.signals.setRepresentation as! Set<Signal<T>> {
             ourSignal.group = newGroup
-            newGroup.add(ourSignal)
+            newGroup.signals.addObject(self)
         }
 
         // Post update to our signals
         oldGroup.value = newGroup.value
     }
 
+    public func disconnect() {
+        // TODO: implement this
+    }
+
     func sendEvent(event: SignalEvent<T>) {
         self.stream.send(event)
+    }
+
+    public override var description: String {
+        return "<\(self.dynamicType): \(unsafeAddressOf(self))>"
     }
 }
 
 class SignalGroup<T> : NSObject {
 
-    var signals = NSHashTable.weakObjectsHashTable()
+    // TODO: use a weak ordered set to ensure determinism?
+    let signals = NSHashTable.weakObjectsHashTable()
     var value: T {
         didSet {
             let event = SignalEvent(value: value, oldValue: oldValue)
@@ -68,27 +80,14 @@ class SignalGroup<T> : NSObject {
         self.value = iv
     }
 
-    func add(signal: Signal<T>) {
-        self.signals.addObject(signal)
-    }
-
-    func remove(signal: Signal<T>) {
-        self.signals.removeObject(signal)
-    }
-
-    func removeAllSignals() {
-        self.signals.removeAllObjects()
-    }
-
     func sendEvent(event: SignalEvent<T>) {
-        for object in self.signals.allObjects {
-            let signal = object as! Signal<T>
+        for signal in self.signals.setRepresentation as! Set<Signal<T>> {
             signal.sendEvent(event)
         }
     }
 }
 
-struct SignalEvent<T> {
+public struct SignalEvent<T> {
     let value: T
     let oldValue: T
 }
