@@ -8,22 +8,37 @@
 
 import Foundation
 
-var signal1 = Signal(initialValue: 1.0)
-signal1.stream.observe { event in
+var channel1 = Channel(initialValue: 1.0)
+channel1.stream.observe { event in
     print("Stream1 value is now \(event.value)")
 }
 
-var signal2 = Signal(initialValue: 1.1)
-signal2.stream.addKeyedObserver("hello") { event in
+var channel2 = Channel(initialValue: 1.1)
+channel2.stream.observe { event in
     print("Stream2 value is now \(event.value)")
 }
 
-signal1.connectTo(signal2)
+channel1.source = channel2
 
-signal2.value = 1.2
-signal1.value = 0.9
+var pin = Pin(initialValue: 1.2)
 
-print("signal1 = \(signal1)")
+channel2.source = pin
+pin.value = 0.9
+
+channel1.source = nil
+channel1.source = Pin(initialValue: 0.333)
+
+print("hello?")
+
+//class Color : NSObject {
+//
+//}
+//
+//class View {
+//    var tintColor: Channel<Color> = Channel<Color>(initialValue: Color())
+//    var calculatedTintColor: Signal<Color> = Pin<Color>(initialValue: Color())
+//}
+
 
 // MARK: - Stream
 

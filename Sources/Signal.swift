@@ -13,51 +13,33 @@ import Foundation
 /// A signal is a value that can be observed. It acts like a variable except that signals
 /// can be connected so they share the same value (like connecting physical wires).
 ///
-public class Signal<T> : NSObject {
+/// `protocol Signal<Value>`
+public class Signal<Value: Equatable> : NSObject  {
+    var _value: Value
+    let _stream: Stream<ChangeEvent<Value>> = Stream()
 
-    var group: SignalGroup<T> // Underlying value
-    var connection: Signal<T>?
-    let connectees = NSHashTable.weakObjectsHashTable()
-    public let stream = Stream<SignalEvent<T>>()
-
-    public var value: T {
+    public internal(set) var value: Value {
         get {
-            return self.group.value
+            return _value
         }
         set {
-            self.group.value = newValue
+            guard newValue != _value else { return }
+
+            let event = ChangeEvent(value: newValue, oldValue: _value)
+            _value = newValue
+
+            _stream.sendEvent(event)
         }
     }
 
-    public init(initialValue iv: T) {
-        self.group = SignalGroup(initialValue: iv)
-        super.init()
-        self.group.signals.addObject(self)
-    }
-
-    /// Take theirs policy
-    public func connectTo(signal: Signal<T>) {
-        guard signal.group != self.group else { return }
-
-        let newGroup = signal.group
-        let oldGroup = self.group
-
-        // Move to new group (this will modify self.group)
-        for ourSignal in oldGroup.signals.setRepresentation as! Set<Signal<T>> {
-            ourSignal.group = newGroup
-            newGroup.signals.addObject(self)
+    public var stream: Stream<ChangeEvent<Value>> {
+        get {
+            return _stream
         }
-
-        // Post update to our signals
-        oldGroup.value = newGroup.value
     }
 
-    public func disconnect() {
-        // TODO: implement this
-    }
-
-    func sendEvent(event: SignalEvent<T>) {
-        self.stream.send(event)
+    init(initialValue: Value) {
+        _value = initialValue
     }
 
     public override var description: String {
@@ -65,30 +47,61 @@ public class Signal<T> : NSObject {
     }
 }
 
-class SignalGroup<T> : NSObject {
+public class Channel<Value: Equatable> : Signal<Value> {
 
-    // TODO: use a weak ordered set to ensure determinism?
-    let signals = NSHashTable.weakObjectsHashTable()
-    var value: T {
-        didSet {
-            let event = SignalEvent(value: value, oldValue: oldValue)
-            self.sendEvent(event)
+    var _source: Signal<Value>?
+    var _observationToken: ObservationToken?
+
+    public var source: Signal<Value>? {
+        get {
+            return _source
+        }
+        set {
+            if let source = _source, let observationToken = _observationToken {
+                source.stream.removeObserverForToken(observationToken)
+            }
+
+            _source = newValue
+
+            if let source = _source {
+                // Observe future values
+                _observationToken = source.stream.tokenObserve { [weak self] event in
+                    self?.value = event.value
+                }
+                // Observe current value
+                self.value = source.value
+            }
         }
     }
 
-    init(initialValue iv: T) {
-        self.value = iv
+    public override init(initialValue: Value) {
+        super.init(initialValue: initialValue)
     }
 
-    func sendEvent(event: SignalEvent<T>) {
-        for signal in self.signals.setRepresentation as! Set<Signal<T>> {
-            signal.sendEvent(event)
-        }
+    public convenience init(source: Signal<Value>) {
+        self.init(initialValue: source.value)
+        self.source = source
     }
 }
 
-public struct SignalEvent<T> {
-    let value: T
-    let oldValue: T
+public class Pin<Value: Equatable> : Signal<Value> {
+
+    public override var value: Value {
+        get {
+            return super.value
+        }
+        set {
+            super.value = newValue
+        }
+    }
+
+    public override init(initialValue: Value) {
+        super.init(initialValue: initialValue)
+    }
+}
+
+public struct ChangeEvent<Value> {
+    let value: Value
+    let oldValue: Value
 }
 
