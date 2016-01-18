@@ -23,6 +23,7 @@ public class Signal<Value: Equatable> : NSObject  {
             return _value
         }
         set {
+            // TODO: send a ValueWillChangeEvent?
             guard newValue != _value else { return }
 
             let event = ChangeEvent(value: newValue, oldValue: _value)
@@ -64,11 +65,11 @@ public class Channel<Value: Equatable> : Signal<Value> {
             _source = newValue
 
             if let source = _source {
-                // Observe future values
+                // Register for future values
                 _observationToken = source.stream.tokenObserve { [weak self] event in
                     self?.value = event.value
                 }
-                // Observe current value
+                // Copy current value and send event
                 self.value = source.value
             }
         }

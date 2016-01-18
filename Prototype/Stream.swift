@@ -68,6 +68,8 @@ public class Stream<Event> : NSObject {
 //        self.pool?.disconnect(self, from: stream)
 //    }
 //
+
+    // TODO: merge these two observer types
     public func observe(observer: Observer) {
         self.observers.append(observer)
     }

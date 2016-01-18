@@ -11,12 +11,26 @@
 		3D3311941C34DBC50047190D /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3343F1C34D6870013779C /* Signal.swift */; };
 		3D3311951C34DBC80047190D /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3343E1C34D6870013779C /* Reactive.swift */; };
 		3D3311961C34DBCC0047190D /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD334401C34D6870013779C /* Stream.swift */; };
+		3D3311991C36FD640047190D /* Switchboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3311971C36FD640047190D /* Switchboard.swift */; };
+		3DC3281A1C4C348D001A9F77 /* Signal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF81E8C1C4C1B800031E419 /* Signal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC3281C1C4C349B001A9F77 /* Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81E8D1C4C1B800031E419 /* Signal.m */; };
+		3DC3281D1C4C34C9001A9F77 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81E911C4C1BB20031E419 /* Channel.m */; };
+		3DC3281E1C4C34C9001A9F77 /* ChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81E991C4C2E0C0031E419 /* ChannelSource.m */; };
+		3DC3281F1C4C34D0001A9F77 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF81E901C4C1BB20031E419 /* Channel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC328201C4C34D0001A9F77 /* ChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF81E981C4C2E0C0031E419 /* ChannelSource.h */; };
+		3DC328231C4C473A001A9F77 /* SignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC328211C4C473A001A9F77 /* SignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC328241C4C473A001A9F77 /* SignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC328221C4C473A001A9F77 /* SignalDidChangeEvent.m */; };
+		3DC328271C4C89FD001A9F77 /* SignalDidChangeEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC328261C4C89FD001A9F77 /* SignalDidChangeEventTests.m */; };
+		3DC3282B1C4C9A0E001A9F77 /* EventStreamObservationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC328291C4C9A0E001A9F77 /* EventStreamObservationToken.h */; };
+		3DC3282C1C4C9A0E001A9F77 /* EventStreamObservationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3282A1C4C9A0E001A9F77 /* EventStreamObservationToken.m */; };
+		3DC3282F1C4CBCB3001A9F77 /* EventPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC3282D1C4CBCB3001A9F77 /* EventPool.h */; };
+		3DC328301C4CBCB3001A9F77 /* EventPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3282E1C4CBCB3001A9F77 /* EventPool.m */; };
 		3DD3342A1C34D5880013779C /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD334291C34D5880013779C /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DD334311C34D5880013779C /* Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD334271C34D5870013779C /* Reactive.framework */; };
-		3DD334361C34D5880013779C /* ReactiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD334351C34D5880013779C /* ReactiveTests.swift */; };
-		3DD334451C34D6C90013779C /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3343E1C34D6870013779C /* Reactive.swift */; };
-		3DD334461C34D6C90013779C /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3343F1C34D6870013779C /* Signal.swift */; };
-		3DD334471C34D6C90013779C /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD334401C34D6870013779C /* Stream.swift */; };
+		3DF81E961C4C1BCE0031E419 /* EventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF81E941C4C1BCE0031E419 /* EventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DF81E971C4C1BCE0031E419 /* EventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81E951C4C1BCE0031E419 /* EventStream.m */; };
+		3DF81E9D1C4C33540031E419 /* ReactiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF81E9C1C4C33540031E419 /* ReactiveTests.m */; };
+		3DF81E9F1C4C33CD0031E419 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF81E9E1C4C33CD0031E419 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +58,33 @@
 /* Begin PBXFileReference section */
 		3D04ABD11C2F869900D1B496 /* ReactiveTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReactiveTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D04ABD41C2F869900D1B496 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3D3311971C36FD640047190D /* Switchboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switchboard.swift; sourceTree = "<group>"; };
+		3DC328211C4C473A001A9F77 /* SignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDidChangeEvent.h; sourceTree = "<group>"; };
+		3DC328221C4C473A001A9F77 /* SignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEvent.m; sourceTree = "<group>"; };
+		3DC328261C4C89FD001A9F77 /* SignalDidChangeEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEventTests.m; sourceTree = "<group>"; };
+		3DC328281C4C994E001A9F77 /* Weak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weak.h; sourceTree = "<group>"; };
+		3DC328291C4C9A0E001A9F77 /* EventStreamObservationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStreamObservationToken.h; sourceTree = "<group>"; };
+		3DC3282A1C4C9A0E001A9F77 /* EventStreamObservationToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventStreamObservationToken.m; sourceTree = "<group>"; };
+		3DC3282D1C4CBCB3001A9F77 /* EventPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPool.h; sourceTree = "<group>"; };
+		3DC3282E1C4CBCB3001A9F77 /* EventPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPool.m; sourceTree = "<group>"; };
 		3DD334271C34D5870013779C /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD334291C34D5880013779C /* Reactive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reactive.h; sourceTree = "<group>"; };
 		3DD3342B1C34D5880013779C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD334301C34D5880013779C /* ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD334351C34D5880013779C /* ReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTests.swift; sourceTree = "<group>"; };
 		3DD334371C34D5880013779C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD3343E1C34D6870013779C /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		3DD3343F1C34D6870013779C /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		3DD334401C34D6870013779C /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		3DF81E8C1C4C1B800031E419 /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		3DF81E8D1C4C1B800031E419 /* Signal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signal.m; sourceTree = "<group>"; };
+		3DF81E901C4C1BB20031E419 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		3DF81E911C4C1BB20031E419 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		3DF81E941C4C1BCE0031E419 /* EventStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventStream.h; sourceTree = "<group>"; };
+		3DF81E951C4C1BCE0031E419 /* EventStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventStream.m; sourceTree = "<group>"; };
+		3DF81E981C4C2E0C0031E419 /* ChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSource.h; sourceTree = "<group>"; };
+		3DF81E991C4C2E0C0031E419 /* ChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelSource.m; sourceTree = "<group>"; };
+		3DF81E9C1C4C33540031E419 /* ReactiveTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveTests.m; sourceTree = "<group>"; };
+		3DF81E9E1C4C33CD0031E419 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF81E9F1C4C33CD0031E419 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +117,10 @@
 		3D04ABC81C2F869900D1B496 = {
 			isa = PBXGroup;
 			children = (
-				3D04ABD31C2F869900D1B496 /* Tool */,
+				3D04ABD31C2F869900D1B496 /* Prototype */,
 				3DD334281C34D5880013779C /* Sources */,
 				3DD334341C34D5880013779C /* Tests */,
+				3DF81EA01C4C33D70031E419 /* Frameworks */,
 				3D04ABD21C2F869900D1B496 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,22 +135,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D04ABD31C2F869900D1B496 /* Tool */ = {
+		3D04ABD31C2F869900D1B496 /* Prototype */ = {
 			isa = PBXGroup;
 			children = (
 				3D04ABD41C2F869900D1B496 /* main.swift */,
+				3DD3343E1C34D6870013779C /* Reactive.swift */,
+				3DD3343F1C34D6870013779C /* Signal.swift */,
+				3DD334401C34D6870013779C /* Stream.swift */,
+				3D3311971C36FD640047190D /* Switchboard.swift */,
 			);
-			path = Tool;
+			path = Prototype;
 			sourceTree = "<group>";
 		};
 		3DD334281C34D5880013779C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3DD3343E1C34D6870013779C /* Reactive.swift */,
-				3DD3343F1C34D6870013779C /* Signal.swift */,
-				3DD334401C34D6870013779C /* Stream.swift */,
-				3DD334291C34D5880013779C /* Reactive.h */,
+				3DF81E901C4C1BB20031E419 /* Channel.h */,
+				3DF81E911C4C1BB20031E419 /* Channel.m */,
+				3DF81E981C4C2E0C0031E419 /* ChannelSource.h */,
+				3DF81E991C4C2E0C0031E419 /* ChannelSource.m */,
+				3DC3282D1C4CBCB3001A9F77 /* EventPool.h */,
+				3DC3282E1C4CBCB3001A9F77 /* EventPool.m */,
+				3DF81E941C4C1BCE0031E419 /* EventStream.h */,
+				3DF81E951C4C1BCE0031E419 /* EventStream.m */,
+				3DC328291C4C9A0E001A9F77 /* EventStreamObservationToken.h */,
+				3DC3282A1C4C9A0E001A9F77 /* EventStreamObservationToken.m */,
 				3DD3342B1C34D5880013779C /* Info.plist */,
+				3DD334291C34D5880013779C /* Reactive.h */,
+				3DF81E8C1C4C1B800031E419 /* Signal.h */,
+				3DF81E8D1C4C1B800031E419 /* Signal.m */,
+				3DC328211C4C473A001A9F77 /* SignalDidChangeEvent.h */,
+				3DC328221C4C473A001A9F77 /* SignalDidChangeEvent.m */,
+				3DC328281C4C994E001A9F77 /* Weak.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -124,10 +174,19 @@
 		3DD334341C34D5880013779C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3DD334351C34D5880013779C /* ReactiveTests.swift */,
+				3DF81E9C1C4C33540031E419 /* ReactiveTests.m */,
+				3DC328261C4C89FD001A9F77 /* SignalDidChangeEventTests.m */,
 				3DD334371C34D5880013779C /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		3DF81EA01C4C33D70031E419 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF81E9E1C4C33CD0031E419 /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +196,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF81E961C4C1BCE0031E419 /* EventStream.h in Headers */,
+				3DC3282B1C4C9A0E001A9F77 /* EventStreamObservationToken.h in Headers */,
+				3DC3281A1C4C348D001A9F77 /* Signal.h in Headers */,
+				3DC3281F1C4C34D0001A9F77 /* Channel.h in Headers */,
+				3DC328201C4C34D0001A9F77 /* ChannelSource.h in Headers */,
+				3DC3282F1C4CBCB3001A9F77 /* EventPool.h in Headers */,
 				3DD3342A1C34D5880013779C /* Reactive.h in Headers */,
+				3DC328231C4C473A001A9F77 /* SignalDidChangeEvent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +328,7 @@
 				3D3311951C34DBC80047190D /* Reactive.swift in Sources */,
 				3D04ABD51C2F869900D1B496 /* main.swift in Sources */,
 				3D3311941C34DBC50047190D /* Signal.swift in Sources */,
+				3D3311991C36FD640047190D /* Switchboard.swift in Sources */,
 				3D3311961C34DBCC0047190D /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD334451C34D6C90013779C /* Reactive.swift in Sources */,
-				3DD334461C34D6C90013779C /* Signal.swift in Sources */,
-				3DD334471C34D6C90013779C /* Stream.swift in Sources */,
+				3DC3282C1C4C9A0E001A9F77 /* EventStreamObservationToken.m in Sources */,
+				3DC328301C4CBCB3001A9F77 /* EventPool.m in Sources */,
+				3DC3281D1C4C34C9001A9F77 /* Channel.m in Sources */,
+				3DC3281E1C4C34C9001A9F77 /* ChannelSource.m in Sources */,
+				3DC3281C1C4C349B001A9F77 /* Signal.m in Sources */,
+				3DC328241C4C473A001A9F77 /* SignalDidChangeEvent.m in Sources */,
+				3DF81E971C4C1BCE0031E419 /* EventStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD334361C34D5880013779C /* ReactiveTests.swift in Sources */,
+				3DC328271C4C89FD001A9F77 /* SignalDidChangeEventTests.m in Sources */,
+				3DF81E9D1C4C33540031E419 /* ReactiveTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
