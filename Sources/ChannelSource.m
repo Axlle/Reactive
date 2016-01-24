@@ -10,4 +10,20 @@
 
 @implementation ChannelSource
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (instancetype)initWithValue:(id)initialValue {
+    self = [super init];
+    if (self) {
+        _value = initialValue;
+    }
+    return self;
+}
+
 @end

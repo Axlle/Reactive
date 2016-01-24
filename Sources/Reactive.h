@@ -16,7 +16,10 @@ FOUNDATION_EXPORT const unsigned char ReactiveVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Reactive/PublicHeader.h>
 #import <Reactive/Channel.h>
+#import <Reactive/ChannelSource.h>
 #import <Reactive/Signal.h>
 #import <Reactive/SignalDidChangeEvent.h>
+#import <Reactive/EventPool.h>
 #import <Reactive/EventStream.h>
+#import <Reactive/EventStreamObservation.h>
 

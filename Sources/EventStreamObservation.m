@@ -6,28 +6,16 @@
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "EventStreamObservation.h"
+#import "EventStreamObservation+Internal.h"
 
-#import "EventStream.h"
+@implementation EventStreamObservation
 
-//@interface WeakInDealloc : NSObject
-//@property (nonatomic)
-//@end
-
-@implementation EventStreamObservation {
-    __weak EventStream *_weakStream;
-}
-
-- (instancetype)initWithStream:(EventStream *)stream {
+- (instancetype)initWithBlock:(void (^)(id))block {
     self = [super init];
     if (self) {
-
+        _block = block;
     }
     return self;
-}
-
-- (void)dealloc {
-    
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface EventPool : NSObject
 
+@property (nonatomic, readonly) NSArray *streams;
+
 @end

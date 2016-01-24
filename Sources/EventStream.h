@@ -26,7 +26,7 @@
 
 - (void)observeWithBlock:(void (^)(id))block;
 - (EventStreamObservation *)observationWithBlock:(void (^)(id))block;
-- (void)removeObservation:(EventStreamObservation *)observation;
+- (void)cancelObservation:(EventStreamObservation *)observation;
 
 - (void)sendEvent:(id)event;
 
