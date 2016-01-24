@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class EventPool;
-@class EventStreamObservationToken;
+@class EventStreamObservation;
 
 /// Stream
 ///
@@ -25,8 +25,8 @@
 - (instancetype)init;
 
 - (void)observeWithBlock:(void (^)(id))block;
-- (EventStreamObservationToken *)tokenObserveWithBlock:(void (^)(id))block;
-- (void)removeObserverForToken:(EventStreamObservationToken *)token;
+- (EventStreamObservation *)observationWithBlock:(void (^)(id))block;
+- (void)removeObservation:(EventStreamObservation *)observation;
 
 - (void)sendEvent:(id)event;
 

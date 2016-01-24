@@ -6,6 +6,7 @@
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
+#import <objc/NSObject.h>
 #import <Foundation/Foundation.h>
 
 @class EventStream;

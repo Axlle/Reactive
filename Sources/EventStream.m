@@ -9,22 +9,14 @@
 #import "EventStream.h"
 
 @implementation EventStream {
-    NSMutableOrderedSet *_observationTokens;
-    NSMutableArray *_observers;
+    NSMutableOrderedSet *_observations;
 }
 
-- (NSMutableOrderedSet *)observationTokens {
-    if (!_observationTokens) {
-        _observationTokens = [NSMutableOrderedSet orderedSet];
+- (NSMutableOrderedSet *)observations {
+    if (!_observations) {
+        _observations = [NSMutableOrderedSet orderedSet];
     }
-    return _observationTokens;
-}
-
-- (NSMutableArray *)observers {
-    if (!_observers) {
-        _observers = [NSMutableArray array];
-    }
-    return _observers;
+    return _observations;
 }
 
 - (instancetype)init {
@@ -33,6 +25,18 @@
 
     }
     return self;
+}
+
+- (void)observeWithBlock:(void (^)(id))block {
+
+}
+
+- (EventStreamObservation *)observationWithBlock:(void (^)(id))block {
+    return nil;
+}
+
+- (void)removeObservation:(EventStreamObservation *)observation {
+
 }
 
 - (void)sendEvent:(id)event {

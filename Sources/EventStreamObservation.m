@@ -6,7 +6,7 @@
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "EventStreamObservationToken.h"
+#import "EventStreamObservation.h"
 
 #import "EventStream.h"
 
@@ -14,11 +14,11 @@
 //@property (nonatomic)
 //@end
 
-@implementation EventStreamObservationToken {
-    weak Stream *_weakStream;
+@implementation EventStreamObservation {
+    __weak EventStream *_weakStream;
 }
 
-- (instancetype)initWithStream:(Stream *)stream {
+- (instancetype)initWithStream:(EventStream *)stream {
     self = [super init];
     if (self) {
 
