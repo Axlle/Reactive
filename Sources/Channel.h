@@ -12,7 +12,10 @@
 
 
 // A channel carries a signal.
-// The value persists after the source is disconnected.
+// A channel inherits the value of its source. After the source is disconnected, the value persists
+// until a new source is connected.
+//
+// Source of truth.
 //
 // It acts like a variable except that signals
 /// can be connected so they share the same value (like connecting physical wires).

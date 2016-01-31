@@ -21,11 +21,12 @@
 @interface EventStream : NSObject
 
 @property (nonatomic, readonly) EventPool *pool;
+@property (nonatomic, readonly) NSArray *connectedStreams;
 
 - (instancetype)init;
 
-- (void)observeWithBlock:(void (^)(id))block;
-- (EventStreamObservation *)observationWithBlock:(void (^)(id))block;
+- (void)observeWithBlock:(void (^)(id event))block;
+- (EventStreamObservation *)observationWithBlock:(void (^)(id event))block;
 - (void)cancelObservation:(EventStreamObservation *)observation;
 
 - (void)sendEvent:(id)event;

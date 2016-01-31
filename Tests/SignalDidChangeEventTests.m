@@ -25,6 +25,20 @@
     XCTAssertNotEqual([event1 hash], [event3 hash]);
     XCTAssertNotEqualObjects(event1, event3);
 
+    SignalDidChangeEvent *event4 = [[SignalDidChangeEvent alloc] initWithValue:@5 oldValue:nil];
+    XCTAssertNotEqual([event1 hash], [event4 hash]);
+    XCTAssertNotEqualObjects(event1, event4);
+
+    SignalDidChangeEvent *event5 = [[SignalDidChangeEvent alloc] initWithValue:nil oldValue:@6];
+    XCTAssertNotEqual([event1 hash], [event5 hash]);
+    XCTAssertNotEqualObjects(event1, event5);
+
+    SignalDidChangeEvent *event6 = [[SignalDidChangeEvent alloc] initWithValue:nil oldValue:nil];
+    SignalDidChangeEvent *event7 = [[SignalDidChangeEvent alloc] initWithValue:nil oldValue:nil];
+    XCTAssertEqual([event6 hash], [event7 hash]);
+    XCTAssertEqualObjects(event6, event7);
+
+    // Compare with other objects
     XCTAssertNotEqualObjects(event1, nil);
     XCTAssertNotEqualObjects(event1, [[NSObject alloc] init]);
 }

@@ -17,11 +17,7 @@
 }
 
 - (instancetype)init {
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
+    return [super init];
 }
 
 - (NSMutableArray *)indefiniteObservers {
@@ -56,6 +52,7 @@
     if (_pool) {
         [_pool sendEvent:event];
     } else {
+        // A pool of one, the loneliest pool
         [self notifyObservers:event];
     }
 }
@@ -70,11 +67,21 @@
 }
 
 - (void)connectToStream:(EventStream *)stream {
-
+    if (_pool) {
+        [_pool connectStream:self toStream:stream];
+    } else if (stream.pool) {
+        [stream.pool connectStream:stream toStream:self];
+    } else {
+        _pool = [[EventPool alloc] initWithStream:self andStream:stream];
+    }
 }
 
 - (void)disconnectFromStream:(EventStream *)stream {
-    
+    [_pool disconnectStream:self fromStream:stream];
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p; pool = %@; indefinite observers = %d; cancelleable observers = %d>", NSStringFromClass([self class]), self, _pool ?: @"nil", (int)_indefiniteObservers.count, (int)_observations.count];
 }
 
 @end

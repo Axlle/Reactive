@@ -9,25 +9,14 @@
 #import "Channel.h"
 
 #import "EventStream.h"
+#import "EventStreamObservation.h"
+#import "SignalDidChangeEvent.h"
 
 @implementation Channel {
     id _value;
-    EventStream *_stream;
-}
-
-- (id)value {
-    return _value;
-}
-
-- (EventStream *)changeStream {
-    if (!_stream) {
-        _stream = [[EventStream alloc] init];
-    }
-    return _stream;
-}
-
-- (void)setSource:(id<Signal>)source {
-
+    EventStream *_changeStream;
+    __weak id<Signal> _source;
+    EventStreamObservation *_sourceObservation;
 }
 
 - (instancetype)init {
@@ -45,9 +34,59 @@
 - (instancetype)initWithSource:(id<Signal>)initialSource {
     self = [self initWithValue:initialSource.value];
     if (self) {
-        // TODO: set source
+        _source = initialSource;
+        [self observeSource];
     }
     return self;
+}
+
+- (id)value {
+    return _value;
+}
+
+- (void)setValue:(id)value {
+    if (value != _value || (value && _value && ![value isEqual:_value])) {
+        id oldValue = _value;
+        _value = value;
+        if (_changeStream) {
+            SignalDidChangeEvent *event = [[SignalDidChangeEvent alloc] initWithValue:_value oldValue:oldValue];
+            [_changeStream sendEvent:event];
+        }
+    }
+}
+
+- (EventStream *)changeStream {
+    if (!_changeStream) {
+        _changeStream = [[EventStream alloc] init];
+    }
+    return _changeStream;
+}
+
+- (id<Signal>)source {
+    return _source;
+}
+
+- (void)setSource:(id<Signal>)source {
+    if (source != _source) {
+        [self unobserveSource];
+        _source = source;
+        [self observeSource];
+
+        if (_source) {
+            [self setValue:_source.value];
+        }
+    }
+}
+
+- (void)unobserveSource {
+    [_source.changeStream cancelObservation:_sourceObservation];
+}
+
+- (void)observeSource {
+    __weak Channel *weakSelf = self;
+    _sourceObservation = [_source.changeStream observationWithBlock:^(SignalDidChangeEvent *event) {
+        [weakSelf setValue:event.value];
+    }];
 }
 
 @end

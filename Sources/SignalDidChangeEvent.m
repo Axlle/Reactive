@@ -28,9 +28,7 @@
 }
 
 - (BOOL)isEqual:(id)object {
-    if (!object) {
-        return NO;
-    } else if (![object isMemberOfClass:[self class]]) {
+    if (![object isMemberOfClass:[self class]]) {
         return NO;
     }
 

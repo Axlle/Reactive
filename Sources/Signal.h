@@ -12,8 +12,7 @@
 
 /// Signal
 ///
-/// A signal is a value that can be observed. It acts like a variable except that signals
-/// can be connected so they share the same value (like connecting physical wires).
+/// A signal is a value that can be observed.
 ///
 @protocol Signal <NSObject>
 

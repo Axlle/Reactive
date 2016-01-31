@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D0F54311C54865A00E8BCF8 /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54301C54865A00E8BCF8 /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D0F54381C54865A00E8BCF8 /* Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0F542D1C54865A00E8BCF8 /* Reactive.framework */; };
-		3D0F543D1C54865A00E8BCF8 /* ReactiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F543C1C54865A00E8BCF8 /* ReactiveTests.m */; };
-		3D0F54791C5488EC00E8BCF8 /* EventPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54731C5488EC00E8BCF8 /* EventPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F547A1C5488EC00E8BCF8 /* EventPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54741C5488EC00E8BCF8 /* EventPool.m */; };
-		3D0F547B1C5488EC00E8BCF8 /* EventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54751C5488EC00E8BCF8 /* EventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F547C1C5488EC00E8BCF8 /* EventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54761C5488EC00E8BCF8 /* EventStream.m */; };
-		3D0F547D1C5488EC00E8BCF8 /* EventStreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54771C5488EC00E8BCF8 /* EventStreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F547E1C5488EC00E8BCF8 /* EventStreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54781C5488EC00E8BCF8 /* EventStreamObservation.m */; };
-		3D0F54871C548A6000E8BCF8 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F547F1C548A6000E8BCF8 /* Channel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F54881C548A6000E8BCF8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54801C548A6000E8BCF8 /* Channel.m */; };
-		3D0F54891C548A6000E8BCF8 /* ChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54811C548A6000E8BCF8 /* ChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F548A1C548A6000E8BCF8 /* ChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54821C548A6000E8BCF8 /* ChannelSource.m */; };
-		3D0F548B1C548A6000E8BCF8 /* Signal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54831C548A6000E8BCF8 /* Signal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F548C1C548A6000E8BCF8 /* Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54841C548A6000E8BCF8 /* Signal.m */; };
-		3D0F548D1C548A6000E8BCF8 /* SignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F548E1C548A6000E8BCF8 /* SignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */; };
-		3D0F54941C54A62500E8BCF8 /* EventStreamObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54931C54A62500E8BCF8 /* EventStreamObservation+Internal.h */; };
-		3D0F54961C54A69100E8BCF8 /* EventPool+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54951C54A69100E8BCF8 /* EventPool+Internal.h */; };
-		3D0F54981C54A8B400E8BCF8 /* EventStream+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54971C54A8B400E8BCF8 /* EventStream+Internal.h */; };
 		3D0F549D1C54ABC500E8BCF8 /* SignalDidChangeEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */; };
+		3D0F549F1C55983B00E8BCF8 /* StreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549E1C55983B00E8BCF8 /* StreamTests.m */; };
+		3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54301C54865A00E8BCF8 /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7C31C5D55C0003F68D2 /* EventPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54731C5488EC00E8BCF8 /* EventPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7C41C5D55C2003F68D2 /* EventPool+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54951C54A69100E8BCF8 /* EventPool+Internal.h */; };
+		3DBEE7C51C5D55C5003F68D2 /* EventPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54741C5488EC00E8BCF8 /* EventPool.m */; };
+		3DBEE7C61C5D55C8003F68D2 /* EventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54751C5488EC00E8BCF8 /* EventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7C71C5D55CB003F68D2 /* EventStream+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54971C54A8B400E8BCF8 /* EventStream+Internal.h */; };
+		3DBEE7C81C5D55CD003F68D2 /* EventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54761C5488EC00E8BCF8 /* EventStream.m */; };
+		3DBEE7C91C5D55CF003F68D2 /* EventStreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54771C5488EC00E8BCF8 /* EventStreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CA1C5D55D1003F68D2 /* EventStreamObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54931C54A62500E8BCF8 /* EventStreamObservation+Internal.h */; };
+		3DBEE7CB1C5D55D4003F68D2 /* EventStreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54781C5488EC00E8BCF8 /* EventStreamObservation.m */; };
+		3DBEE7CC1C5D5662003F68D2 /* SignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CD1C5D5667003F68D2 /* SignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */; };
+		3DBEE7CE1C5D5857003F68D2 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F547F1C548A6000E8BCF8 /* Channel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CF1C5D585B003F68D2 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54801C548A6000E8BCF8 /* Channel.m */; };
+		3DBEE7D01C5D585E003F68D2 /* ChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54811C548A6000E8BCF8 /* ChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7D11C5D5862003F68D2 /* ChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54821C548A6000E8BCF8 /* ChannelSource.m */; };
+		3DBEE7D21C5D5865003F68D2 /* Signal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54831C548A6000E8BCF8 /* Signal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7D51C5D7734003F68D2 /* SignalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE7D41C5D7734003F68D2 /* SignalTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		3D0F54301C54865A00E8BCF8 /* Reactive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reactive.h; sourceTree = "<group>"; };
 		3D0F54321C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0F54371C54865A00E8BCF8 /* ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D0F543C1C54865A00E8BCF8 /* ReactiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveTests.m; sourceTree = "<group>"; };
 		3D0F543E1C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0F54731C5488EC00E8BCF8 /* EventPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPool.h; sourceTree = "<group>"; };
 		3D0F54741C5488EC00E8BCF8 /* EventPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventPool.m; sourceTree = "<group>"; };
@@ -58,13 +57,14 @@
 		3D0F54811C548A6000E8BCF8 /* ChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSource.h; sourceTree = "<group>"; };
 		3D0F54821C548A6000E8BCF8 /* ChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelSource.m; sourceTree = "<group>"; };
 		3D0F54831C548A6000E8BCF8 /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
-		3D0F54841C548A6000E8BCF8 /* Signal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signal.m; sourceTree = "<group>"; };
 		3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDidChangeEvent.h; sourceTree = "<group>"; };
 		3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEvent.m; sourceTree = "<group>"; };
 		3D0F54931C54A62500E8BCF8 /* EventStreamObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventStreamObservation+Internal.h"; sourceTree = "<group>"; };
 		3D0F54951C54A69100E8BCF8 /* EventPool+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventPool+Internal.h"; sourceTree = "<group>"; };
 		3D0F54971C54A8B400E8BCF8 /* EventStream+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventStream+Internal.h"; sourceTree = "<group>"; };
 		3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEventTests.m; sourceTree = "<group>"; };
+		3D0F549E1C55983B00E8BCF8 /* StreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamTests.m; sourceTree = "<group>"; };
+		3DBEE7D41C5D7734003F68D2 /* SignalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				3D0F54301C54865A00E8BCF8 /* Reactive.h */,
-				3D0F549A1C54AA7000E8BCF8 /* Signals */,
-				3D0F54991C54A8C500E8BCF8 /* Streams */,
+				3D0F54991C54A8C500E8BCF8 /* Stream */,
+				3D0F549A1C54AA7000E8BCF8 /* Signal & Channel */,
 				3D0F54321C54865A00E8BCF8 /* Info.plist */,
 			);
 			path = Sources;
@@ -118,14 +118,15 @@
 		3D0F543B1C54865A00E8BCF8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F543C1C54865A00E8BCF8 /* ReactiveTests.m */,
+				3D0F549E1C55983B00E8BCF8 /* StreamTests.m */,
+				3DBEE7D41C5D7734003F68D2 /* SignalTests.m */,
 				3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */,
 				3D0F543E1C54865A00E8BCF8 /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		3D0F54991C54A8C500E8BCF8 /* Streams */ = {
+		3D0F54991C54A8C500E8BCF8 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
 				3D0F54731C5488EC00E8BCF8 /* EventPool.h */,
@@ -138,10 +139,10 @@
 				3D0F54931C54A62500E8BCF8 /* EventStreamObservation+Internal.h */,
 				3D0F54781C5488EC00E8BCF8 /* EventStreamObservation.m */,
 			);
-			name = Streams;
+			name = Stream;
 			sourceTree = "<group>";
 		};
-		3D0F549A1C54AA7000E8BCF8 /* Signals */ = {
+		3D0F549A1C54AA7000E8BCF8 /* Signal & Channel */ = {
 			isa = PBXGroup;
 			children = (
 				3D0F547F1C548A6000E8BCF8 /* Channel.h */,
@@ -149,11 +150,10 @@
 				3D0F54811C548A6000E8BCF8 /* ChannelSource.h */,
 				3D0F54821C548A6000E8BCF8 /* ChannelSource.m */,
 				3D0F54831C548A6000E8BCF8 /* Signal.h */,
-				3D0F54841C548A6000E8BCF8 /* Signal.m */,
 				3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */,
 				3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */,
 			);
-			name = Signals;
+			name = "Signal & Channel";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,17 +163,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0F54981C54A8B400E8BCF8 /* EventStream+Internal.h in Headers */,
-				3D0F547D1C5488EC00E8BCF8 /* EventStreamObservation.h in Headers */,
-				3D0F54791C5488EC00E8BCF8 /* EventPool.h in Headers */,
-				3D0F548D1C548A6000E8BCF8 /* SignalDidChangeEvent.h in Headers */,
-				3D0F54891C548A6000E8BCF8 /* ChannelSource.h in Headers */,
-				3D0F548B1C548A6000E8BCF8 /* Signal.h in Headers */,
-				3D0F54871C548A6000E8BCF8 /* Channel.h in Headers */,
-				3D0F547B1C5488EC00E8BCF8 /* EventStream.h in Headers */,
-				3D0F54961C54A69100E8BCF8 /* EventPool+Internal.h in Headers */,
-				3D0F54311C54865A00E8BCF8 /* Reactive.h in Headers */,
-				3D0F54941C54A62500E8BCF8 /* EventStreamObservation+Internal.h in Headers */,
+				3DBEE7C91C5D55CF003F68D2 /* EventStreamObservation.h in Headers */,
+				3DBEE7D01C5D585E003F68D2 /* ChannelSource.h in Headers */,
+				3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */,
+				3DBEE7C71C5D55CB003F68D2 /* EventStream+Internal.h in Headers */,
+				3DBEE7CC1C5D5662003F68D2 /* SignalDidChangeEvent.h in Headers */,
+				3DBEE7C61C5D55C8003F68D2 /* EventStream.h in Headers */,
+				3DBEE7C31C5D55C0003F68D2 /* EventPool.h in Headers */,
+				3DBEE7D21C5D5865003F68D2 /* Signal.h in Headers */,
+				3DBEE7C41C5D55C2003F68D2 /* EventPool+Internal.h in Headers */,
+				3DBEE7CE1C5D5857003F68D2 /* Channel.h in Headers */,
+				3DBEE7CA1C5D55D1003F68D2 /* EventStreamObservation+Internal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,13 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0F547C1C5488EC00E8BCF8 /* EventStream.m in Sources */,
-				3D0F548A1C548A6000E8BCF8 /* ChannelSource.m in Sources */,
-				3D0F54881C548A6000E8BCF8 /* Channel.m in Sources */,
-				3D0F548C1C548A6000E8BCF8 /* Signal.m in Sources */,
-				3D0F547E1C5488EC00E8BCF8 /* EventStreamObservation.m in Sources */,
-				3D0F548E1C548A6000E8BCF8 /* SignalDidChangeEvent.m in Sources */,
-				3D0F547A1C5488EC00E8BCF8 /* EventPool.m in Sources */,
+				3DBEE7D11C5D5862003F68D2 /* ChannelSource.m in Sources */,
+				3DBEE7CD1C5D5667003F68D2 /* SignalDidChangeEvent.m in Sources */,
+				3DBEE7C81C5D55CD003F68D2 /* EventStream.m in Sources */,
+				3DBEE7CB1C5D55D4003F68D2 /* EventStreamObservation.m in Sources */,
+				3DBEE7CF1C5D585B003F68D2 /* Channel.m in Sources */,
+				3DBEE7C51C5D55C5003F68D2 /* EventPool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D0F549D1C54ABC500E8BCF8 /* SignalDidChangeEventTests.m in Sources */,
-				3D0F543D1C54865A00E8BCF8 /* ReactiveTests.m in Sources */,
+				3DBEE7D51C5D7734003F68D2 /* SignalTests.m in Sources */,
+				3D0F549F1C55983B00E8BCF8 /* StreamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +346,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
@@ -388,7 +388,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
