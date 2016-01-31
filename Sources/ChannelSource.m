@@ -8,12 +8,12 @@
 
 #import "ChannelSource.h"
 
-#import "EventStream.h"
+#import "Stream.h"
 #import "SignalDidChangeEvent.h"
 
 @implementation ChannelSource {
     id _value;
-    EventStream *_changeStream;
+    Stream *_changeStream;
 }
 
 - (instancetype)init {
@@ -43,9 +43,9 @@
     }
 }
 
-- (EventStream *)changeStream {
+- (Stream *)changeStream {
     if (!_changeStream) {
-        _changeStream = [[EventStream alloc] init];
+        _changeStream = [[Stream alloc] init];
     }
     return _changeStream;
 }

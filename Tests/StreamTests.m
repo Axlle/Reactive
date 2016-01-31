@@ -18,7 +18,7 @@
 - (void)testSimple {
     __block id actualEvent;
 
-    EventStream *stream = [[EventStream alloc] init];
+    Stream *stream = [[Stream alloc] init];
     [stream observeWithBlock:^(id event) {
         actualEvent = event;
     }];
@@ -31,8 +31,8 @@
 - (void)testExplicitObservationCancellation {
     __block id actualEvent;
 
-    EventStream *stream = [[EventStream alloc] init];
-    EventStreamObservation *observation = [stream observationWithBlock:^(id event) {
+    Stream *stream = [[Stream alloc] init];
+    StreamObservation *observation = [stream observationWithBlock:^(id event) {
         actualEvent = event;
     }];
 
@@ -50,12 +50,12 @@
 - (void)testImplicitObservationCancellation {
     __block id actualEvent;
 
-    EventStream *stream;
-    EventStreamObservation *observation;
+    Stream *stream;
+    StreamObservation *observation;
 
     // Create a scope so the observation gets deallocated
     @autoreleasepool {
-        stream = [[EventStream alloc] init];
+        stream = [[Stream alloc] init];
         observation = [stream observationWithBlock:^(id event) {
             actualEvent = event;
         }];

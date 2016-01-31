@@ -6,11 +6,11 @@
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "EventStream.h"
+#import "Stream.h"
 
-@interface EventStream ()
+@interface Stream ()
 
-@property (nonatomic, readwrite) EventPool *pool;
+@property (nonatomic, readwrite) StreamPool *pool;
 
 - (void)notifyObservers:(id)event;
 

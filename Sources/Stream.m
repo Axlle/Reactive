@@ -6,18 +6,27 @@
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "EventStream.h"
+#import "Stream.h"
 
-#import "EventPool+Internal.h"
-#import "EventStreamObservation+Internal.h"
+#import "StreamPool+Internal.h"
+#import "StreamObservation+Internal.h"
 
-@implementation EventStream {
+@implementation Stream {
+    StreamPool *_pool;
     NSMutableArray *_indefiniteObservers;
     NSHashTable *_observations;
 }
 
 - (instancetype)init {
     return [super init];
+}
+
+- (StreamPool *)pool {
+    return _pool;
+}
+
+- (NSArray *)connectedStreams {
+    return _pool ? [_pool streamsConnectedToStream:self] : @[];
 }
 
 - (NSMutableArray *)indefiniteObservers {
@@ -38,13 +47,13 @@
     [[self indefiniteObservers] addObject:block];
 }
 
-- (EventStreamObservation *)observationWithBlock:(void (^)(id))block {
-    EventStreamObservation *observation = [[EventStreamObservation alloc] initWithBlock:block];
+- (StreamObservation *)observationWithBlock:(void (^)(id))block {
+    StreamObservation *observation = [[StreamObservation alloc] initWithBlock:block];
     [[self observations] addObject:observation];
     return observation;
 }
 
-- (void)cancelObservation:(EventStreamObservation *)observation {
+- (void)cancelObservation:(StreamObservation *)observation {
     [_observations removeObject:observation];
 }
 
@@ -61,22 +70,22 @@
     for (void (^block)(id) in _indefiniteObservers) {
         block(event);
     }
-    for (EventStreamObservation *observation in _observations) {
+    for (StreamObservation *observation in _observations) {
         observation.block(event);
     }
 }
 
-- (void)connectToStream:(EventStream *)stream {
+- (void)connectToStream:(Stream *)stream {
     if (_pool) {
         [_pool connectStream:self toStream:stream];
     } else if (stream.pool) {
         [stream.pool connectStream:stream toStream:self];
     } else {
-        _pool = [[EventPool alloc] initWithStream:self andStream:stream];
+        _pool = [[StreamPool alloc] initWithStream:self andStream:stream];
     }
 }
 
-- (void)disconnectFromStream:(EventStream *)stream {
+- (void)disconnectFromStream:(Stream *)stream {
     [_pool disconnectStream:self fromStream:stream];
 }
 

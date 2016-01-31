@@ -1,21 +1,21 @@
 //
-//  EventPool.m
+//  StreamPool.m
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "EventPool+Internal.h"
+#import "StreamPool+Internal.h"
 
-#import "EventStream+Internal.h"
+#import "Stream+Internal.h"
 
-@implementation EventPool {
+@implementation StreamPool {
     NSPointerArray *_streams;
     NSMutableArray *_connections; // array of sets of indices into _streams
 }
 
-- (instancetype)initWithStream:(EventStream *)stream1 andStream:(EventStream *)stream2 {
+- (instancetype)initWithStream:(Stream *)stream1 andStream:(Stream *)stream2 {
     self = [super init];
     if (self) {
         _streams = [NSPointerArray weakObjectsPointerArray];
@@ -36,16 +36,16 @@
 
 - (void)sendEvent:(id)event {
     // TODO: connections may have died
-    for (EventStream *stream in _streams) {
+    for (Stream *stream in _streams) {
         [stream notifyObservers:event];
     }
 }
 
-- (void)connectStream:(EventStream *)stream1 toStream:(EventStream *)stream2 {
+- (void)connectStream:(Stream *)stream1 toStream:(Stream *)stream2 {
     // TODO: connections may have died
 }
 
-- (void)disconnectStream:(EventStream *)stream1 fromStream:(EventStream *)stream2 {
+- (void)disconnectStream:(Stream *)stream1 fromStream:(Stream *)stream2 {
     // TODO: connections may have died
 }
 

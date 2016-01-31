@@ -1,5 +1,5 @@
 //
-//  EventStreamObservation.h
+//  StreamPool.h
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-// The lifespan of the observer block is bound to the lifecycle of this object.
-@interface EventStreamObservation : NSObject
+@interface StreamPool : NSObject
+
+@property (nonatomic, readonly) NSArray *streams;
+
 @end

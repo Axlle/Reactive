@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class EventStream;
+@class Stream;
 
 /// Signal
 ///
@@ -17,7 +17,7 @@
 @protocol Signal <NSObject>
 
 @property (nonatomic, readonly) id value;
-@property (nonatomic, readonly) EventStream *changeStream;
+@property (nonatomic, readonly) Stream *changeStream;
 
 @end
 

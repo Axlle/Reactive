@@ -7,9 +7,9 @@
 //
 
 // Streams
-#import <Reactive/EventPool.h>
-#import <Reactive/EventStream.h>
-#import <Reactive/EventStreamObservation.h>
+#import <Reactive/StreamPool.h>
+#import <Reactive/Stream.h>
+#import <Reactive/StreamObservation.h>
 
 // Signals
 #import <Reactive/Channel.h>
