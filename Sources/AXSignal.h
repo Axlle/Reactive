@@ -1,5 +1,5 @@
 //
-//  Signal.h
+//  AXSignal.h
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class Stream;
+@class AXStream;
 
 /// Signal
 ///
 /// A signal is a value that can be observed.
 ///
-@protocol Signal <NSObject>
+@protocol AXSignal <NSObject>
 
 @property (nonatomic, readonly) id value;
-@property (nonatomic, readonly) Stream *changeStream;
+@property (nonatomic, readonly) AXStream *changeStream;
 
 @end
 

@@ -1,14 +1,14 @@
 //
-//  SignalDidChangeEvent.m
+//  AXSignalDidChangeEvent.m
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
 //  Copyright © 2016 William Green. All rights reserved.
 //
 
-#import "SignalDidChangeEvent.h"
+#import "AXSignalDidChangeEvent.h"
 
-@implementation SignalDidChangeEvent
+@implementation AXSignalDidChangeEvent
 
 - (instancetype)initWithValue:(id)value oldValue:(id)oldValue {
     self = [super init];
@@ -32,9 +32,9 @@
         return NO;
     }
 
-    SignalDidChangeEvent *event = object;
-    return ((self.value == nil    && event.value == nil)    || [self.value isEqual:event.value]) &&
-           ((self.oldValue == nil && event.oldValue == nil) || [self.oldValue isEqual:event.oldValue]);
+    AXSignalDidChangeEvent *event = object;
+    return (self.value == event.value       || [self.value isEqual:event.value]) &&
+           (self.oldValue == event.oldValue || [self.oldValue isEqual:event.oldValue]);
 }
 
 @end

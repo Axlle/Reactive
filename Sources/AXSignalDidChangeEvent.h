@@ -1,5 +1,5 @@
 //
-//  SignalDidChangeEvent.h
+//  AXSignalDidChangeEvent.h
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SignalDidChangeEvent : NSObject <NSCopying>
+@interface AXSignalDidChangeEvent : NSObject <NSCopying>
 
 @property (nonatomic, readonly) id value;
 @property (nonatomic, readonly) id oldValue;

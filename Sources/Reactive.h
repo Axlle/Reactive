@@ -7,14 +7,13 @@
 //
 
 // Streams
-#import <Reactive/StreamPool.h>
-#import <Reactive/Stream.h>
-#import <Reactive/StreamObservation.h>
+#import <Reactive/AXStream.h>
+#import <Reactive/AXStreamObservation.h>
 
 // Signals
-#import <Reactive/Channel.h>
-#import <Reactive/ChannelSource.h>
-#import <Reactive/Signal.h>
-#import <Reactive/SignalDidChangeEvent.h>
+#import <Reactive/AXChannel.h>
+#import <Reactive/AXChannelSource.h>
+#import <Reactive/AXSignal.h>
+#import <Reactive/AXSignalDidChangeEvent.h>
 
 

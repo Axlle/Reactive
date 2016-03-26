@@ -16,7 +16,9 @@
 
 - (void)sendEvent:(id)event;
 
+- (NSArray *)streamsConnectedToStream:(Stream *)stream;
 - (void)connectStream:(Stream *)stream1 toStream:(Stream *)stream2;
 - (void)disconnectStream:(Stream *)stream1 fromStream:(Stream *)stream2;
+- (void)removeStream:(Stream *)stream;
 
 @end

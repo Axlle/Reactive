@@ -40,27 +40,27 @@
     }];
     XCTAssertNil(observedEvent, @"Observer should not be called during registration");
 
-    // 5 to 6
+    // Change 5 to 6
     source.value = @6;
     XCTAssertEqualObjects(source.value, @6);
     SignalDidChangeEvent *expectedEvent1 = [[SignalDidChangeEvent alloc] initWithValue:@6 oldValue:@5];
     XCTAssertEqualObjects(expectedEvent1, observedEvent);
 
-    // 6 to nil
+    // Change 6 to nil
     observedEvent = nil;
     source.value = nil;
     XCTAssertNil(source.value);
     SignalDidChangeEvent *expectedEvent2 = [[SignalDidChangeEvent alloc] initWithValue:nil oldValue:@6];
     XCTAssertEqualObjects(expectedEvent2, observedEvent);
 
-    // nil to 6
+    // Change nil to 6
     observedEvent = nil;
     source.value = @6;
     XCTAssertEqualObjects(source.value, @6);
     SignalDidChangeEvent *expectedEvent3 = [[SignalDidChangeEvent alloc] initWithValue:@6 oldValue:nil];
     XCTAssertEqualObjects(expectedEvent3, observedEvent);
 
-    // 6 to 6
+    // Change 6 to 6
     observedEvent = nil;
     source.value = @6;
     XCTAssertEqualObjects(source.value, @6);
@@ -78,7 +78,7 @@
     }];
     XCTAssertNil(observedEvent, @"Observer should not be called during registration");
 
-    // 5 to 6 -> 5
+    // Change 5 to 5 -> 5
     ChannelSource *source = [[ChannelSource alloc] initWithValue:@6];
     channel.source = source;
     XCTAssertEqualObjects(channel.value, @6);
@@ -92,18 +92,18 @@
     XCTAssertEqualObjects(channel.value, @6);
     XCTAssertNil(observedEvent);
 
-    // 6 -> 6
+    // Create a channel already connected to the source
     Channel *intermediateChannel = [[Channel alloc] initWithSource:source];
     XCTAssertEqualObjects(intermediateChannel.value, @6);
     XCTAssertEqualObjects(intermediateChannel.source, source);
     XCTAssertNil(observedEvent);
 
-    // 6 -> 6 to 6 -> 6 -> 6
+    // Change 6 -> 6 to 6 -> 6 -> 6
     channel.source = intermediateChannel;
     XCTAssertEqualObjects(channel.value, @6);
     XCTAssertNil(observedEvent);
 
-    // 6 -> 6 -> 6 to 5 -> 6 -> 6
+    // Change 6 -> 6 -> 6 to 5 -> 5 -> 5
     source.value = @5;
     XCTAssertEqualObjects(channel.value, @5);
     XCTAssertEqualObjects(channel.source, intermediateChannel);
@@ -111,6 +111,20 @@
     XCTAssertEqualObjects(intermediateChannel.source, source);
     SignalDidChangeEvent *expectedEvent2 = [[SignalDidChangeEvent alloc] initWithValue:@5 oldValue:@6];
     XCTAssertEqualObjects(expectedEvent2, observedEvent);
+}
+
+- (void)testWeakSource {
+    Channel *channel = [[Channel alloc] initWithValue:@5];
+    ChannelSource *source;
+    @autoreleasepool {
+        source = [[ChannelSource alloc] initWithValue:@6];
+        channel.source = source;
+        XCTAssertEqualObjects(channel.source, source);
+        XCTAssertEqualObjects(channel.value, @6);
+    }
+    source = nil;
+    XCTAssertEqualObjects(channel.source, nil);
+    XCTAssertEqualObjects(channel.value, @6);
 }
 
 @end

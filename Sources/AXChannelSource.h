@@ -1,5 +1,5 @@
 //
-//  ChannelSource.h
+//  AXChannelSource.h
 //  Reactive
 //
 //  Created by William Green on 2016-01-17.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Signal.h"
+#import "AXSignal.h"
 
-@interface ChannelSource : NSObject <Signal>
+@interface AXChannelSource : NSObject <AXSignal>
 
 @property (nonatomic, readwrite) id value;
 

@@ -11,22 +11,17 @@
 		3D0F549D1C54ABC500E8BCF8 /* SignalDidChangeEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */; };
 		3D0F549F1C55983B00E8BCF8 /* StreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549E1C55983B00E8BCF8 /* StreamTests.m */; };
 		3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54301C54865A00E8BCF8 /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7C31C5D55C0003F68D2 /* StreamPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54731C5488EC00E8BCF8 /* StreamPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7C41C5D55C2003F68D2 /* StreamPool+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54951C54A69100E8BCF8 /* StreamPool+Internal.h */; };
-		3DBEE7C51C5D55C5003F68D2 /* StreamPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54741C5488EC00E8BCF8 /* StreamPool.m */; };
-		3DBEE7C61C5D55C8003F68D2 /* Stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54751C5488EC00E8BCF8 /* Stream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7C71C5D55CB003F68D2 /* Stream+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54971C54A8B400E8BCF8 /* Stream+Internal.h */; };
-		3DBEE7C81C5D55CD003F68D2 /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54761C5488EC00E8BCF8 /* Stream.m */; };
-		3DBEE7C91C5D55CF003F68D2 /* StreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54771C5488EC00E8BCF8 /* StreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CA1C5D55D1003F68D2 /* StreamObservation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54931C54A62500E8BCF8 /* StreamObservation+Internal.h */; };
-		3DBEE7CB1C5D55D4003F68D2 /* StreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54781C5488EC00E8BCF8 /* StreamObservation.m */; };
-		3DBEE7CC1C5D5662003F68D2 /* SignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CD1C5D5667003F68D2 /* SignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */; };
-		3DBEE7CE1C5D5857003F68D2 /* Channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F547F1C548A6000E8BCF8 /* Channel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CF1C5D585B003F68D2 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54801C548A6000E8BCF8 /* Channel.m */; };
-		3DBEE7D01C5D585E003F68D2 /* ChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54811C548A6000E8BCF8 /* ChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7D11C5D5862003F68D2 /* ChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54821C548A6000E8BCF8 /* ChannelSource.m */; };
-		3DBEE7D21C5D5865003F68D2 /* Signal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54831C548A6000E8BCF8 /* Signal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7C61C5D55C8003F68D2 /* AXStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54751C5488EC00E8BCF8 /* AXStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7C81C5D55CD003F68D2 /* AXStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54761C5488EC00E8BCF8 /* AXStream.m */; };
+		3DBEE7C91C5D55CF003F68D2 /* AXStreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CB1C5D55D4003F68D2 /* AXStreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */; };
+		3DBEE7CC1C5D5662003F68D2 /* AXSignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CD1C5D5667003F68D2 /* AXSignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */; };
+		3DBEE7CE1C5D5857003F68D2 /* AXChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F547F1C548A6000E8BCF8 /* AXChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7CF1C5D585B003F68D2 /* AXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54801C548A6000E8BCF8 /* AXChannel.m */; };
+		3DBEE7D01C5D585E003F68D2 /* AXChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBEE7D11C5D5862003F68D2 /* AXChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */; };
+		3DBEE7D21C5D5865003F68D2 /* AXSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54831C548A6000E8BCF8 /* AXSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DBEE7D51C5D7734003F68D2 /* SignalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE7D41C5D7734003F68D2 /* SignalTests.m */; };
 /* End PBXBuildFile section */
 
@@ -46,22 +41,17 @@
 		3D0F54321C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0F54371C54865A00E8BCF8 /* ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0F543E1C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D0F54731C5488EC00E8BCF8 /* StreamPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamPool.h; sourceTree = "<group>"; };
-		3D0F54741C5488EC00E8BCF8 /* StreamPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamPool.m; sourceTree = "<group>"; };
-		3D0F54751C5488EC00E8BCF8 /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
-		3D0F54761C5488EC00E8BCF8 /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
-		3D0F54771C5488EC00E8BCF8 /* StreamObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamObservation.h; sourceTree = "<group>"; };
-		3D0F54781C5488EC00E8BCF8 /* StreamObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamObservation.m; sourceTree = "<group>"; };
-		3D0F547F1C548A6000E8BCF8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
-		3D0F54801C548A6000E8BCF8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
-		3D0F54811C548A6000E8BCF8 /* ChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelSource.h; sourceTree = "<group>"; };
-		3D0F54821C548A6000E8BCF8 /* ChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelSource.m; sourceTree = "<group>"; };
-		3D0F54831C548A6000E8BCF8 /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
-		3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalDidChangeEvent.h; sourceTree = "<group>"; };
-		3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEvent.m; sourceTree = "<group>"; };
-		3D0F54931C54A62500E8BCF8 /* StreamObservation+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamObservation+Internal.h"; sourceTree = "<group>"; };
-		3D0F54951C54A69100E8BCF8 /* StreamPool+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamPool+Internal.h"; sourceTree = "<group>"; };
-		3D0F54971C54A8B400E8BCF8 /* Stream+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Stream+Internal.h"; sourceTree = "<group>"; };
+		3D0F54751C5488EC00E8BCF8 /* AXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStream.h; sourceTree = "<group>"; };
+		3D0F54761C5488EC00E8BCF8 /* AXStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStream.m; sourceTree = "<group>"; };
+		3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStreamObservation.h; sourceTree = "<group>"; };
+		3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStreamObservation.m; sourceTree = "<group>"; };
+		3D0F547F1C548A6000E8BCF8 /* AXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXChannel.h; sourceTree = "<group>"; };
+		3D0F54801C548A6000E8BCF8 /* AXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXChannel.m; sourceTree = "<group>"; };
+		3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXChannelSource.h; sourceTree = "<group>"; };
+		3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXChannelSource.m; sourceTree = "<group>"; };
+		3D0F54831C548A6000E8BCF8 /* AXSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXSignal.h; sourceTree = "<group>"; };
+		3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXSignalDidChangeEvent.h; sourceTree = "<group>"; };
+		3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXSignalDidChangeEvent.m; sourceTree = "<group>"; };
 		3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEventTests.m; sourceTree = "<group>"; };
 		3D0F549E1C55983B00E8BCF8 /* StreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamTests.m; sourceTree = "<group>"; };
 		3DBEE7D41C5D7734003F68D2 /* SignalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalTests.m; sourceTree = "<group>"; };
@@ -129,15 +119,10 @@
 		3D0F54991C54A8C500E8BCF8 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F54751C5488EC00E8BCF8 /* Stream.h */,
-				3D0F54971C54A8B400E8BCF8 /* Stream+Internal.h */,
-				3D0F54761C5488EC00E8BCF8 /* Stream.m */,
-				3D0F54771C5488EC00E8BCF8 /* StreamObservation.h */,
-				3D0F54931C54A62500E8BCF8 /* StreamObservation+Internal.h */,
-				3D0F54781C5488EC00E8BCF8 /* StreamObservation.m */,
-				3D0F54731C5488EC00E8BCF8 /* StreamPool.h */,
-				3D0F54951C54A69100E8BCF8 /* StreamPool+Internal.h */,
-				3D0F54741C5488EC00E8BCF8 /* StreamPool.m */,
+				3D0F54751C5488EC00E8BCF8 /* AXStream.h */,
+				3D0F54761C5488EC00E8BCF8 /* AXStream.m */,
+				3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */,
+				3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -145,13 +130,13 @@
 		3D0F549A1C54AA7000E8BCF8 /* Signal & Channel */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F547F1C548A6000E8BCF8 /* Channel.h */,
-				3D0F54801C548A6000E8BCF8 /* Channel.m */,
-				3D0F54811C548A6000E8BCF8 /* ChannelSource.h */,
-				3D0F54821C548A6000E8BCF8 /* ChannelSource.m */,
-				3D0F54831C548A6000E8BCF8 /* Signal.h */,
-				3D0F54851C548A6000E8BCF8 /* SignalDidChangeEvent.h */,
-				3D0F54861C548A6000E8BCF8 /* SignalDidChangeEvent.m */,
+				3D0F547F1C548A6000E8BCF8 /* AXChannel.h */,
+				3D0F54801C548A6000E8BCF8 /* AXChannel.m */,
+				3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */,
+				3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */,
+				3D0F54831C548A6000E8BCF8 /* AXSignal.h */,
+				3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */,
+				3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */,
 			);
 			name = "Signal & Channel";
 			sourceTree = "<group>";
@@ -163,17 +148,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBEE7C91C5D55CF003F68D2 /* StreamObservation.h in Headers */,
-				3DBEE7D01C5D585E003F68D2 /* ChannelSource.h in Headers */,
+				3DBEE7C91C5D55CF003F68D2 /* AXStreamObservation.h in Headers */,
+				3DBEE7D01C5D585E003F68D2 /* AXChannelSource.h in Headers */,
 				3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */,
-				3DBEE7C71C5D55CB003F68D2 /* Stream+Internal.h in Headers */,
-				3DBEE7CC1C5D5662003F68D2 /* SignalDidChangeEvent.h in Headers */,
-				3DBEE7C61C5D55C8003F68D2 /* Stream.h in Headers */,
-				3DBEE7C31C5D55C0003F68D2 /* StreamPool.h in Headers */,
-				3DBEE7D21C5D5865003F68D2 /* Signal.h in Headers */,
-				3DBEE7C41C5D55C2003F68D2 /* StreamPool+Internal.h in Headers */,
-				3DBEE7CE1C5D5857003F68D2 /* Channel.h in Headers */,
-				3DBEE7CA1C5D55D1003F68D2 /* StreamObservation+Internal.h in Headers */,
+				3DBEE7CC1C5D5662003F68D2 /* AXSignalDidChangeEvent.h in Headers */,
+				3DBEE7C61C5D55C8003F68D2 /* AXStream.h in Headers */,
+				3DBEE7D21C5D5865003F68D2 /* AXSignal.h in Headers */,
+				3DBEE7CE1C5D5857003F68D2 /* AXChannel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,12 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBEE7D11C5D5862003F68D2 /* ChannelSource.m in Sources */,
-				3DBEE7CD1C5D5667003F68D2 /* SignalDidChangeEvent.m in Sources */,
-				3DBEE7C81C5D55CD003F68D2 /* Stream.m in Sources */,
-				3DBEE7CB1C5D55D4003F68D2 /* StreamObservation.m in Sources */,
-				3DBEE7CF1C5D585B003F68D2 /* Channel.m in Sources */,
-				3DBEE7C51C5D55C5003F68D2 /* StreamPool.m in Sources */,
+				3DBEE7D11C5D5862003F68D2 /* AXChannelSource.m in Sources */,
+				3DBEE7CD1C5D5667003F68D2 /* AXSignalDidChangeEvent.m in Sources */,
+				3DBEE7C81C5D55CD003F68D2 /* AXStream.m in Sources */,
+				3DBEE7CB1C5D55D4003F68D2 /* AXStreamObservation.m in Sources */,
+				3DBEE7CF1C5D585B003F68D2 /* AXChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
