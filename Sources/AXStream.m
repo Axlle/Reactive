@@ -8,7 +8,7 @@
 
 #import "AXStream.h"
 
-#import "StreamObservation.h"
+#import "AXStreamObservation.h"
 
 @implementation AXStream {
     NSHashTable *_weakConnections;

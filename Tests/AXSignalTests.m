@@ -1,5 +1,5 @@
 //
-//  SignalTests.m
+//  AXSignalTests.m
 //  Reactive
 //
 //  Created by William Green on 2016-01-30.
@@ -9,33 +9,33 @@
 #import <XCTest/XCTest.h>
 #import <Reactive/Reactive.h>
 
-@interface SignalTests : XCTestCase
+@interface AXSignalTests : XCTestCase
 
 @end
 
-@implementation SignalTests
+@implementation AXSignalTests
 
 - (void)testInitialValue {
-    Channel *channel1 = [[Channel alloc] initWithValue:@5];
+    AXChannel *channel1 = [[AXChannel alloc] initWithValue:@5];
     XCTAssertEqualObjects(channel1.value, @5);
 
-    Channel *channel2 = [[Channel alloc] init];
+    AXChannel *channel2 = [[AXChannel alloc] init];
     XCTAssertEqualObjects(channel2.value, nil);
 
-    ChannelSource *source1 = [[ChannelSource alloc] initWithValue:@5];
+    AXChannelSource *source1 = [[AXChannelSource alloc] initWithValue:@5];
     XCTAssertEqualObjects(source1.value, @5);
 
-    ChannelSource *source2 = [[ChannelSource alloc] init];
+    AXChannelSource *source2 = [[AXChannelSource alloc] init];
     XCTAssertEqualObjects(source2.value, nil);
 }
 
 - (void)testChannelSource {
-    ChannelSource *source = [[ChannelSource alloc] initWithValue:@5];
+    AXChannelSource *source = [[AXChannelSource alloc] initWithValue:@5];
 
     __block id observedEvent;
     [source.changeStream observeWithBlock:^(id event) {
         XCTAssertNil(observedEvent, @"Observer block should be called once");
-        XCTAssert([event isKindOfClass:[SignalDidChangeEvent class]]);
+        XCTAssert([event isKindOfClass:[AXSignalDidChangeEvent class]]);
         observedEvent = event;
     }];
     XCTAssertNil(observedEvent, @"Observer should not be called during registration");
@@ -43,21 +43,21 @@
     // Change 5 to 6
     source.value = @6;
     XCTAssertEqualObjects(source.value, @6);
-    SignalDidChangeEvent *expectedEvent1 = [[SignalDidChangeEvent alloc] initWithValue:@6 oldValue:@5];
+    AXSignalDidChangeEvent *expectedEvent1 = [[AXSignalDidChangeEvent alloc] initWithValue:@6 oldValue:@5];
     XCTAssertEqualObjects(expectedEvent1, observedEvent);
 
     // Change 6 to nil
     observedEvent = nil;
     source.value = nil;
     XCTAssertNil(source.value);
-    SignalDidChangeEvent *expectedEvent2 = [[SignalDidChangeEvent alloc] initWithValue:nil oldValue:@6];
+    AXSignalDidChangeEvent *expectedEvent2 = [[AXSignalDidChangeEvent alloc] initWithValue:nil oldValue:@6];
     XCTAssertEqualObjects(expectedEvent2, observedEvent);
 
     // Change nil to 6
     observedEvent = nil;
     source.value = @6;
     XCTAssertEqualObjects(source.value, @6);
-    SignalDidChangeEvent *expectedEvent3 = [[SignalDidChangeEvent alloc] initWithValue:@6 oldValue:nil];
+    AXSignalDidChangeEvent *expectedEvent3 = [[AXSignalDidChangeEvent alloc] initWithValue:@6 oldValue:nil];
     XCTAssertEqualObjects(expectedEvent3, observedEvent);
 
     // Change 6 to 6
@@ -68,22 +68,22 @@
 }
 
 - (void)testChannel {
-    Channel *channel = [[Channel alloc] initWithValue:@5];
+    AXChannel *channel = [[AXChannel alloc] initWithValue:@5];
 
     __block id observedEvent;
     [channel.changeStream observeWithBlock:^(id event) {
         XCTAssertNil(observedEvent, @"Observer block should be called once");
-        XCTAssert([event isKindOfClass:[SignalDidChangeEvent class]]);
+        XCTAssert([event isKindOfClass:[AXSignalDidChangeEvent class]]);
         observedEvent = event;
     }];
     XCTAssertNil(observedEvent, @"Observer should not be called during registration");
 
     // Change 5 to 5 -> 5
-    ChannelSource *source = [[ChannelSource alloc] initWithValue:@6];
+    AXChannelSource *source = [[AXChannelSource alloc] initWithValue:@6];
     channel.source = source;
     XCTAssertEqualObjects(channel.value, @6);
     XCTAssertEqualObjects(channel.source, source);
-    SignalDidChangeEvent *expectedEvent1 = [[SignalDidChangeEvent alloc] initWithValue:@6 oldValue:@5];
+    AXSignalDidChangeEvent *expectedEvent1 = [[AXSignalDidChangeEvent alloc] initWithValue:@6 oldValue:@5];
     XCTAssertEqualObjects(expectedEvent1, observedEvent);
 
     // Disconnect
@@ -93,7 +93,7 @@
     XCTAssertNil(observedEvent);
 
     // Create a channel already connected to the source
-    Channel *intermediateChannel = [[Channel alloc] initWithSource:source];
+    AXChannel *intermediateChannel = [[AXChannel alloc] initWithSource:source];
     XCTAssertEqualObjects(intermediateChannel.value, @6);
     XCTAssertEqualObjects(intermediateChannel.source, source);
     XCTAssertNil(observedEvent);
@@ -109,15 +109,15 @@
     XCTAssertEqualObjects(channel.source, intermediateChannel);
     XCTAssertEqualObjects(intermediateChannel.value, @5);
     XCTAssertEqualObjects(intermediateChannel.source, source);
-    SignalDidChangeEvent *expectedEvent2 = [[SignalDidChangeEvent alloc] initWithValue:@5 oldValue:@6];
+    AXSignalDidChangeEvent *expectedEvent2 = [[AXSignalDidChangeEvent alloc] initWithValue:@5 oldValue:@6];
     XCTAssertEqualObjects(expectedEvent2, observedEvent);
 }
 
 - (void)testWeakSource {
-    Channel *channel = [[Channel alloc] initWithValue:@5];
-    ChannelSource *source;
+    AXChannel *channel = [[AXChannel alloc] initWithValue:@5];
+    AXChannelSource *source;
     @autoreleasepool {
-        source = [[ChannelSource alloc] initWithValue:@6];
+        source = [[AXChannelSource alloc] initWithValue:@6];
         channel.source = source;
         XCTAssertEqualObjects(channel.source, source);
         XCTAssertEqualObjects(channel.value, @6);

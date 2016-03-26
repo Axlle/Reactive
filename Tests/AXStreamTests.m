@@ -1,5 +1,5 @@
 //
-//  StreamTests.m
+//  AXStreamTests.m
 //  Reactive
 //
 //  Created by William Green on 2016-01-24.
@@ -9,14 +9,14 @@
 #import <XCTest/XCTest.h>
 #import <Reactive/Reactive.h>
 
-@interface StreamTests : XCTestCase
+@interface AXStreamTests : XCTestCase
 
 @end
 
-@implementation StreamTests
+@implementation AXStreamTests
 
 - (void)testSimple {
-    Stream *stream = [[Stream alloc] init];
+    AXStream *stream = [[AXStream alloc] init];
 
     __block id observedEvent;
     [stream observeWithBlock:^(id event) {
@@ -31,10 +31,10 @@
 }
 
 - (void)testExplicitObservationCancellation {
-    Stream *stream = [[Stream alloc] init];
+    AXStream *stream = [[AXStream alloc] init];
 
     __block id observedEvent;
-    StreamObservation *observation = [stream tokenObservationWithBlock:^(id event) {
+    AXStreamObservation *observation = [stream tokenObservationWithBlock:^(id event) {
         XCTAssertNil(observedEvent, @"Observer block should be called once");
         observedEvent = event;
     }];
@@ -54,8 +54,8 @@
 - (void)testImplicitObservationCancellation {
     __block id observedEvent;
 
-    Stream *stream = [[Stream alloc] init];
-    StreamObservation *observation;
+    AXStream *stream = [[AXStream alloc] init];
+    AXStreamObservation *observation;
 
     // Create a scope so the observation gets deallocated
     @autoreleasepool {
@@ -78,7 +78,7 @@
 }
 
 - (void)testUnheldObservation {
-    Stream *stream = [[Stream alloc] init];
+    AXStream *stream = [[AXStream alloc] init];
     @autoreleasepool {
         (void)[stream tokenObservationWithBlock:^(id event) {
             XCTFail(@"Observer should never be called");
@@ -88,10 +88,10 @@
 }
 
 - (void)testModifyingObserversInCallback {
-    Stream *stream = [[Stream alloc] init];
+    AXStream *stream = [[AXStream alloc] init];
 
-    __block StreamObservation *observation1;
-    __block StreamObservation *observation2;
+    __block AXStreamObservation *observation1;
+    __block AXStreamObservation *observation2;
 
     observation1 = [stream tokenObservationWithBlock:^(id event) {
         // Observer #1 called first, observer #2 should not be called
@@ -112,8 +112,8 @@
 }
 
 - (void)testConnectionPool2 {
-    Stream *stream1 = [[Stream alloc] init];
-    Stream *stream2 = [[Stream alloc] init];
+    AXStream *stream1 = [[AXStream alloc] init];
+    AXStream *stream2 = [[AXStream alloc] init];
 
     XCTAssertEqualObjects(stream1.connectedStreams, [NSSet set]);
     XCTAssertEqualObjects(stream2.connectedStreams, [NSSet set]);
@@ -157,9 +157,9 @@
 }
 
 - (void)testConnectionPool3 {
-    Stream *stream1 = [[Stream alloc] init];
-    Stream *stream2 = [[Stream alloc] init];
-    Stream *stream3 = [[Stream alloc] init];
+    AXStream *stream1 = [[AXStream alloc] init];
+    AXStream *stream2 = [[AXStream alloc] init];
+    AXStream *stream3 = [[AXStream alloc] init];
 
     XCTAssertEqualObjects(stream1.connectedStreams, [NSSet set]);
     XCTAssertEqualObjects(stream2.connectedStreams, [NSSet set]);

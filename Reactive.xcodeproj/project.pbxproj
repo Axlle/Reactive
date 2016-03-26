@@ -7,136 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D0F54381C54865A00E8BCF8 /* Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0F542D1C54865A00E8BCF8 /* Reactive.framework */; };
-		3D0F549D1C54ABC500E8BCF8 /* SignalDidChangeEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */; };
-		3D0F549F1C55983B00E8BCF8 /* StreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F549E1C55983B00E8BCF8 /* StreamTests.m */; };
-		3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54301C54865A00E8BCF8 /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7C61C5D55C8003F68D2 /* AXStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54751C5488EC00E8BCF8 /* AXStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7C81C5D55CD003F68D2 /* AXStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54761C5488EC00E8BCF8 /* AXStream.m */; };
-		3DBEE7C91C5D55CF003F68D2 /* AXStreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CB1C5D55D4003F68D2 /* AXStreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */; };
-		3DBEE7CC1C5D5662003F68D2 /* AXSignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CD1C5D5667003F68D2 /* AXSignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */; };
-		3DBEE7CE1C5D5857003F68D2 /* AXChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F547F1C548A6000E8BCF8 /* AXChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7CF1C5D585B003F68D2 /* AXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54801C548A6000E8BCF8 /* AXChannel.m */; };
-		3DBEE7D01C5D585E003F68D2 /* AXChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7D11C5D5862003F68D2 /* AXChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */; };
-		3DBEE7D21C5D5865003F68D2 /* AXSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D0F54831C548A6000E8BCF8 /* AXSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBEE7D51C5D7734003F68D2 /* SignalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEE7D41C5D7734003F68D2 /* SignalTests.m */; };
+		3D73E79B1CA66C8900ADA2ED /* Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D73E7901CA66C8800ADA2ED /* Reactive.framework */; };
+		3D73E7BA1CA66D0700ADA2ED /* AXChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7AA1CA66D0700ADA2ED /* AXChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7BB1CA66D0700ADA2ED /* AXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7AB1CA66D0700ADA2ED /* AXChannel.m */; };
+		3D73E7BC1CA66D0700ADA2ED /* AXChannelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7AC1CA66D0700ADA2ED /* AXChannelSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7BD1CA66D0700ADA2ED /* AXChannelSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7AD1CA66D0700ADA2ED /* AXChannelSource.m */; };
+		3D73E7BE1CA66D0700ADA2ED /* AXSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7AE1CA66D0700ADA2ED /* AXSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7BF1CA66D0700ADA2ED /* AXSignalDidChangeEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7AF1CA66D0700ADA2ED /* AXSignalDidChangeEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7C01CA66D0700ADA2ED /* AXSignalDidChangeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7B01CA66D0700ADA2ED /* AXSignalDidChangeEvent.m */; };
+		3D73E7C11CA66D0700ADA2ED /* AXStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7B11CA66D0700ADA2ED /* AXStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7C21CA66D0700ADA2ED /* AXStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7B21CA66D0700ADA2ED /* AXStream.m */; };
+		3D73E7C31CA66D0700ADA2ED /* AXStreamObservation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7B31CA66D0700ADA2ED /* AXStreamObservation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7C41CA66D0700ADA2ED /* AXStreamObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7B41CA66D0700ADA2ED /* AXStreamObservation.m */; };
+		3D73E7C61CA66D0700ADA2ED /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D73E7B61CA66D0700ADA2ED /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D73E7D41CA6701500ADA2ED /* AXSignalDidChangeEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7CD1CA66FB300ADA2ED /* AXSignalDidChangeEventTests.m */; };
+		3D73E7D51CA671C400ADA2ED /* AXSignalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7CE1CA66FB300ADA2ED /* AXSignalTests.m */; };
+		3D73E7D61CA6725500ADA2ED /* AXStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D73E7CF1CA66FB300ADA2ED /* AXStreamTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D0F54391C54865A00E8BCF8 /* PBXContainerItemProxy */ = {
+		3D73E79C1CA66C8900ADA2ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3D0F54241C54865A00E8BCF8 /* Project object */;
+			containerPortal = 3D73E7871CA66C8800ADA2ED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3D0F542C1C54865A00E8BCF8;
+			remoteGlobalIDString = 3D73E78F1CA66C8800ADA2ED;
 			remoteInfo = Reactive;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D0F542D1C54865A00E8BCF8 /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D0F54301C54865A00E8BCF8 /* Reactive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reactive.h; sourceTree = "<group>"; };
-		3D0F54321C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D0F54371C54865A00E8BCF8 /* ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D0F543E1C54865A00E8BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D0F54751C5488EC00E8BCF8 /* AXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStream.h; sourceTree = "<group>"; };
-		3D0F54761C5488EC00E8BCF8 /* AXStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStream.m; sourceTree = "<group>"; };
-		3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStreamObservation.h; sourceTree = "<group>"; };
-		3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStreamObservation.m; sourceTree = "<group>"; };
-		3D0F547F1C548A6000E8BCF8 /* AXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXChannel.h; sourceTree = "<group>"; };
-		3D0F54801C548A6000E8BCF8 /* AXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXChannel.m; sourceTree = "<group>"; };
-		3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXChannelSource.h; sourceTree = "<group>"; };
-		3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXChannelSource.m; sourceTree = "<group>"; };
-		3D0F54831C548A6000E8BCF8 /* AXSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXSignal.h; sourceTree = "<group>"; };
-		3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXSignalDidChangeEvent.h; sourceTree = "<group>"; };
-		3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXSignalDidChangeEvent.m; sourceTree = "<group>"; };
-		3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalDidChangeEventTests.m; sourceTree = "<group>"; };
-		3D0F549E1C55983B00E8BCF8 /* StreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamTests.m; sourceTree = "<group>"; };
-		3DBEE7D41C5D7734003F68D2 /* SignalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalTests.m; sourceTree = "<group>"; };
+		3D73E7901CA66C8800ADA2ED /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D73E79A1CA66C8900ADA2ED /* ReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D73E7AA1CA66D0700ADA2ED /* AXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXChannel.h; path = Sources/AXChannel.h; sourceTree = SOURCE_ROOT; };
+		3D73E7AB1CA66D0700ADA2ED /* AXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXChannel.m; path = Sources/AXChannel.m; sourceTree = SOURCE_ROOT; };
+		3D73E7AC1CA66D0700ADA2ED /* AXChannelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXChannelSource.h; path = Sources/AXChannelSource.h; sourceTree = SOURCE_ROOT; };
+		3D73E7AD1CA66D0700ADA2ED /* AXChannelSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXChannelSource.m; path = Sources/AXChannelSource.m; sourceTree = SOURCE_ROOT; };
+		3D73E7AE1CA66D0700ADA2ED /* AXSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXSignal.h; path = Sources/AXSignal.h; sourceTree = SOURCE_ROOT; };
+		3D73E7AF1CA66D0700ADA2ED /* AXSignalDidChangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXSignalDidChangeEvent.h; path = Sources/AXSignalDidChangeEvent.h; sourceTree = SOURCE_ROOT; };
+		3D73E7B01CA66D0700ADA2ED /* AXSignalDidChangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXSignalDidChangeEvent.m; path = Sources/AXSignalDidChangeEvent.m; sourceTree = SOURCE_ROOT; };
+		3D73E7B11CA66D0700ADA2ED /* AXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXStream.h; path = Sources/AXStream.h; sourceTree = SOURCE_ROOT; };
+		3D73E7B21CA66D0700ADA2ED /* AXStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXStream.m; path = Sources/AXStream.m; sourceTree = SOURCE_ROOT; };
+		3D73E7B31CA66D0700ADA2ED /* AXStreamObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXStreamObservation.h; path = Sources/AXStreamObservation.h; sourceTree = SOURCE_ROOT; };
+		3D73E7B41CA66D0700ADA2ED /* AXStreamObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXStreamObservation.m; path = Sources/AXStreamObservation.m; sourceTree = SOURCE_ROOT; };
+		3D73E7B51CA66D0700ADA2ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		3D73E7B61CA66D0700ADA2ED /* Reactive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reactive.h; path = Sources/Reactive.h; sourceTree = SOURCE_ROOT; };
+		3D73E7CC1CA66FB300ADA2ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		3D73E7CD1CA66FB300ADA2ED /* AXSignalDidChangeEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXSignalDidChangeEventTests.m; path = Tests/AXSignalDidChangeEventTests.m; sourceTree = SOURCE_ROOT; };
+		3D73E7CE1CA66FB300ADA2ED /* AXSignalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXSignalTests.m; path = Tests/AXSignalTests.m; sourceTree = SOURCE_ROOT; };
+		3D73E7CF1CA66FB300ADA2ED /* AXStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXStreamTests.m; path = Tests/AXStreamTests.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D0F54291C54865A00E8BCF8 /* Frameworks */ = {
+		3D73E78C1CA66C8800ADA2ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0F54341C54865A00E8BCF8 /* Frameworks */ = {
+		3D73E7971CA66C8900ADA2ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0F54381C54865A00E8BCF8 /* Reactive.framework in Frameworks */,
+				3D73E79B1CA66C8900ADA2ED /* Reactive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D0F54231C54865A00E8BCF8 = {
+		3D73E7861CA66C8800ADA2ED = {
 			isa = PBXGroup;
 			children = (
-				3D0F542F1C54865A00E8BCF8 /* Sources */,
-				3D0F543B1C54865A00E8BCF8 /* Tests */,
-				3D0F542E1C54865A00E8BCF8 /* Products */,
+				3D73E7921CA66C8800ADA2ED /* Reactive */,
+				3D73E79E1CA66C8900ADA2ED /* ReactiveTests */,
+				3D73E7911CA66C8800ADA2ED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3D0F542E1C54865A00E8BCF8 /* Products */ = {
+		3D73E7911CA66C8800ADA2ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F542D1C54865A00E8BCF8 /* Reactive.framework */,
-				3D0F54371C54865A00E8BCF8 /* ReactiveTests.xctest */,
+				3D73E7901CA66C8800ADA2ED /* Reactive.framework */,
+				3D73E79A1CA66C8900ADA2ED /* ReactiveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3D0F542F1C54865A00E8BCF8 /* Sources */ = {
+		3D73E7921CA66C8800ADA2ED /* Reactive */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F54301C54865A00E8BCF8 /* Reactive.h */,
-				3D0F54991C54A8C500E8BCF8 /* Stream */,
-				3D0F549A1C54AA7000E8BCF8 /* Signal & Channel */,
-				3D0F54321C54865A00E8BCF8 /* Info.plist */,
+				3D73E7B61CA66D0700ADA2ED /* Reactive.h */,
+				3D73E7CA1CA66D3700ADA2ED /* Stream */,
+				3D73E7CB1CA66D4100ADA2ED /* Signal & Channel */,
+				3D73E7B51CA66D0700ADA2ED /* Info.plist */,
 			);
-			path = Sources;
+			path = Reactive;
 			sourceTree = "<group>";
 		};
-		3D0F543B1C54865A00E8BCF8 /* Tests */ = {
+		3D73E79E1CA66C8900ADA2ED /* ReactiveTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F549E1C55983B00E8BCF8 /* StreamTests.m */,
-				3DBEE7D41C5D7734003F68D2 /* SignalTests.m */,
-				3D0F549B1C54AB0A00E8BCF8 /* SignalDidChangeEventTests.m */,
-				3D0F543E1C54865A00E8BCF8 /* Info.plist */,
+				3D73E7CD1CA66FB300ADA2ED /* AXSignalDidChangeEventTests.m */,
+				3D73E7CE1CA66FB300ADA2ED /* AXSignalTests.m */,
+				3D73E7CF1CA66FB300ADA2ED /* AXStreamTests.m */,
+				3D73E7CC1CA66FB300ADA2ED /* Info.plist */,
 			);
-			path = Tests;
+			path = ReactiveTests;
 			sourceTree = "<group>";
 		};
-		3D0F54991C54A8C500E8BCF8 /* Stream */ = {
+		3D73E7CA1CA66D3700ADA2ED /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F54751C5488EC00E8BCF8 /* AXStream.h */,
-				3D0F54761C5488EC00E8BCF8 /* AXStream.m */,
-				3D0F54771C5488EC00E8BCF8 /* AXStreamObservation.h */,
-				3D0F54781C5488EC00E8BCF8 /* AXStreamObservation.m */,
+				3D73E7B11CA66D0700ADA2ED /* AXStream.h */,
+				3D73E7B21CA66D0700ADA2ED /* AXStream.m */,
+				3D73E7B31CA66D0700ADA2ED /* AXStreamObservation.h */,
+				3D73E7B41CA66D0700ADA2ED /* AXStreamObservation.m */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
 		};
-		3D0F549A1C54AA7000E8BCF8 /* Signal & Channel */ = {
+		3D73E7CB1CA66D4100ADA2ED /* Signal & Channel */ = {
 			isa = PBXGroup;
 			children = (
-				3D0F547F1C548A6000E8BCF8 /* AXChannel.h */,
-				3D0F54801C548A6000E8BCF8 /* AXChannel.m */,
-				3D0F54811C548A6000E8BCF8 /* AXChannelSource.h */,
-				3D0F54821C548A6000E8BCF8 /* AXChannelSource.m */,
-				3D0F54831C548A6000E8BCF8 /* AXSignal.h */,
-				3D0F54851C548A6000E8BCF8 /* AXSignalDidChangeEvent.h */,
-				3D0F54861C548A6000E8BCF8 /* AXSignalDidChangeEvent.m */,
+				3D73E7AA1CA66D0700ADA2ED /* AXChannel.h */,
+				3D73E7AB1CA66D0700ADA2ED /* AXChannel.m */,
+				3D73E7AC1CA66D0700ADA2ED /* AXChannelSource.h */,
+				3D73E7AD1CA66D0700ADA2ED /* AXChannelSource.m */,
+				3D73E7AE1CA66D0700ADA2ED /* AXSignal.h */,
+				3D73E7AF1CA66D0700ADA2ED /* AXSignalDidChangeEvent.h */,
+				3D73E7B01CA66D0700ADA2ED /* AXSignalDidChangeEvent.m */,
 			);
 			name = "Signal & Channel";
 			sourceTree = "<group>";
@@ -144,31 +144,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3D0F542A1C54865A00E8BCF8 /* Headers */ = {
+		3D73E78D1CA66C8800ADA2ED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBEE7C91C5D55CF003F68D2 /* AXStreamObservation.h in Headers */,
-				3DBEE7D01C5D585E003F68D2 /* AXChannelSource.h in Headers */,
-				3DBEE7C21C5D55A9003F68D2 /* Reactive.h in Headers */,
-				3DBEE7CC1C5D5662003F68D2 /* AXSignalDidChangeEvent.h in Headers */,
-				3DBEE7C61C5D55C8003F68D2 /* AXStream.h in Headers */,
-				3DBEE7D21C5D5865003F68D2 /* AXSignal.h in Headers */,
-				3DBEE7CE1C5D5857003F68D2 /* AXChannel.h in Headers */,
+				3D73E7BC1CA66D0700ADA2ED /* AXChannelSource.h in Headers */,
+				3D73E7BE1CA66D0700ADA2ED /* AXSignal.h in Headers */,
+				3D73E7C31CA66D0700ADA2ED /* AXStreamObservation.h in Headers */,
+				3D73E7C61CA66D0700ADA2ED /* Reactive.h in Headers */,
+				3D73E7C11CA66D0700ADA2ED /* AXStream.h in Headers */,
+				3D73E7BF1CA66D0700ADA2ED /* AXSignalDidChangeEvent.h in Headers */,
+				3D73E7BA1CA66D0700ADA2ED /* AXChannel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3D0F542C1C54865A00E8BCF8 /* Reactive */ = {
+		3D73E78F1CA66C8800ADA2ED /* Reactive */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D0F54411C54865A00E8BCF8 /* Build configuration list for PBXNativeTarget "Reactive" */;
+			buildConfigurationList = 3D73E7A41CA66C8900ADA2ED /* Build configuration list for PBXNativeTarget "Reactive" */;
 			buildPhases = (
-				3D0F54281C54865A00E8BCF8 /* Sources */,
-				3D0F54291C54865A00E8BCF8 /* Frameworks */,
-				3D0F542A1C54865A00E8BCF8 /* Headers */,
-				3D0F542B1C54865A00E8BCF8 /* Resources */,
+				3D73E78B1CA66C8800ADA2ED /* Sources */,
+				3D73E78C1CA66C8800ADA2ED /* Frameworks */,
+				3D73E78D1CA66C8800ADA2ED /* Headers */,
+				3D73E78E1CA66C8800ADA2ED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -176,71 +176,71 @@
 			);
 			name = Reactive;
 			productName = Reactive;
-			productReference = 3D0F542D1C54865A00E8BCF8 /* Reactive.framework */;
+			productReference = 3D73E7901CA66C8800ADA2ED /* Reactive.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3D0F54361C54865A00E8BCF8 /* ReactiveTests */ = {
+		3D73E7991CA66C8900ADA2ED /* ReactiveTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D0F54441C54865A00E8BCF8 /* Build configuration list for PBXNativeTarget "ReactiveTests" */;
+			buildConfigurationList = 3D73E7A71CA66C8900ADA2ED /* Build configuration list for PBXNativeTarget "ReactiveTests" */;
 			buildPhases = (
-				3D0F54331C54865A00E8BCF8 /* Sources */,
-				3D0F54341C54865A00E8BCF8 /* Frameworks */,
-				3D0F54351C54865A00E8BCF8 /* Resources */,
+				3D73E7961CA66C8900ADA2ED /* Sources */,
+				3D73E7971CA66C8900ADA2ED /* Frameworks */,
+				3D73E7981CA66C8900ADA2ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3D0F543A1C54865A00E8BCF8 /* PBXTargetDependency */,
+				3D73E79D1CA66C8900ADA2ED /* PBXTargetDependency */,
 			);
 			name = ReactiveTests;
 			productName = ReactiveTests;
-			productReference = 3D0F54371C54865A00E8BCF8 /* ReactiveTests.xctest */;
+			productReference = 3D73E79A1CA66C8900ADA2ED /* ReactiveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3D0F54241C54865A00E8BCF8 /* Project object */ = {
+		3D73E7871CA66C8800ADA2ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "William Green";
 				TargetAttributes = {
-					3D0F542C1C54865A00E8BCF8 = {
-						CreatedOnToolsVersion = 7.2;
+					3D73E78F1CA66C8800ADA2ED = {
+						CreatedOnToolsVersion = 7.3;
 					};
-					3D0F54361C54865A00E8BCF8 = {
-						CreatedOnToolsVersion = 7.2;
+					3D73E7991CA66C8900ADA2ED = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = 3D0F54271C54865A00E8BCF8 /* Build configuration list for PBXProject "Reactive" */;
+			buildConfigurationList = 3D73E78A1CA66C8800ADA2ED /* Build configuration list for PBXProject "Reactive" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3D0F54231C54865A00E8BCF8;
-			productRefGroup = 3D0F542E1C54865A00E8BCF8 /* Products */;
+			mainGroup = 3D73E7861CA66C8800ADA2ED;
+			productRefGroup = 3D73E7911CA66C8800ADA2ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D0F542C1C54865A00E8BCF8 /* Reactive */,
-				3D0F54361C54865A00E8BCF8 /* ReactiveTests */,
+				3D73E78F1CA66C8800ADA2ED /* Reactive */,
+				3D73E7991CA66C8900ADA2ED /* ReactiveTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3D0F542B1C54865A00E8BCF8 /* Resources */ = {
+		3D73E78E1CA66C8800ADA2ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0F54351C54865A00E8BCF8 /* Resources */ = {
+		3D73E7981CA66C8900ADA2ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,43 +250,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3D0F54281C54865A00E8BCF8 /* Sources */ = {
+		3D73E78B1CA66C8800ADA2ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBEE7D11C5D5862003F68D2 /* AXChannelSource.m in Sources */,
-				3DBEE7CD1C5D5667003F68D2 /* AXSignalDidChangeEvent.m in Sources */,
-				3DBEE7C81C5D55CD003F68D2 /* AXStream.m in Sources */,
-				3DBEE7CB1C5D55D4003F68D2 /* AXStreamObservation.m in Sources */,
-				3DBEE7CF1C5D585B003F68D2 /* AXChannel.m in Sources */,
+				3D73E7BB1CA66D0700ADA2ED /* AXChannel.m in Sources */,
+				3D73E7BD1CA66D0700ADA2ED /* AXChannelSource.m in Sources */,
+				3D73E7C41CA66D0700ADA2ED /* AXStreamObservation.m in Sources */,
+				3D73E7C21CA66D0700ADA2ED /* AXStream.m in Sources */,
+				3D73E7C01CA66D0700ADA2ED /* AXSignalDidChangeEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D0F54331C54865A00E8BCF8 /* Sources */ = {
+		3D73E7961CA66C8900ADA2ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0F549D1C54ABC500E8BCF8 /* SignalDidChangeEventTests.m in Sources */,
-				3DBEE7D51C5D7734003F68D2 /* SignalTests.m in Sources */,
-				3D0F549F1C55983B00E8BCF8 /* StreamTests.m in Sources */,
+				3D73E7D51CA671C400ADA2ED /* AXSignalTests.m in Sources */,
+				3D73E7D41CA6701500ADA2ED /* AXSignalDidChangeEventTests.m in Sources */,
+				3D73E7D61CA6725500ADA2ED /* AXStreamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D0F543A1C54865A00E8BCF8 /* PBXTargetDependency */ = {
+		3D73E79D1CA66C8900ADA2ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D0F542C1C54865A00E8BCF8 /* Reactive */;
-			targetProxy = 3D0F54391C54865A00E8BCF8 /* PBXContainerItemProxy */;
+			target = 3D73E78F1CA66C8800ADA2ED /* Reactive */;
+			targetProxy = 3D73E79C1CA66C8900ADA2ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3D0F543F1C54865A00E8BCF8 /* Debug */ = {
+		3D73E7A21CA66C8900ADA2ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -321,20 +322,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "";
+				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3D0F54401C54865A00E8BCF8 /* Release */ = {
+		3D73E7A31CA66C8900ADA2ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -363,17 +365,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "";
+				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		3D0F54421C54865A00E8BCF8 /* Debug */ = {
+		3D73E7A51CA66C8900ADA2ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -389,7 +391,7 @@
 			};
 			name = Debug;
 		};
-		3D0F54431C54865A00E8BCF8 /* Release */ = {
+		3D73E7A61CA66C8900ADA2ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -405,10 +407,9 @@
 			};
 			name = Release;
 		};
-		3D0F54451C54865A00E8BCF8 /* Debug */ = {
+		3D73E7A81CA66C8900ADA2ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = axlle.ReactiveTests;
@@ -416,10 +417,9 @@
 			};
 			name = Debug;
 		};
-		3D0F54461C54865A00E8BCF8 /* Release */ = {
+		3D73E7A91CA66C8900ADA2ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = axlle.ReactiveTests;
@@ -430,34 +430,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D0F54271C54865A00E8BCF8 /* Build configuration list for PBXProject "Reactive" */ = {
+		3D73E78A1CA66C8800ADA2ED /* Build configuration list for PBXProject "Reactive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D0F543F1C54865A00E8BCF8 /* Debug */,
-				3D0F54401C54865A00E8BCF8 /* Release */,
+				3D73E7A21CA66C8900ADA2ED /* Debug */,
+				3D73E7A31CA66C8900ADA2ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D0F54411C54865A00E8BCF8 /* Build configuration list for PBXNativeTarget "Reactive" */ = {
+		3D73E7A41CA66C8900ADA2ED /* Build configuration list for PBXNativeTarget "Reactive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D0F54421C54865A00E8BCF8 /* Debug */,
-				3D0F54431C54865A00E8BCF8 /* Release */,
+				3D73E7A51CA66C8900ADA2ED /* Debug */,
+				3D73E7A61CA66C8900ADA2ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D0F54441C54865A00E8BCF8 /* Build configuration list for PBXNativeTarget "ReactiveTests" */ = {
+		3D73E7A71CA66C8900ADA2ED /* Build configuration list for PBXNativeTarget "ReactiveTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D0F54451C54865A00E8BCF8 /* Debug */,
-				3D0F54461C54865A00E8BCF8 /* Release */,
+				3D73E7A81CA66C8900ADA2ED /* Debug */,
+				3D73E7A91CA66C8900ADA2ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3D0F54241C54865A00E8BCF8 /* Project object */;
+	rootObject = 3D73E7871CA66C8800ADA2ED /* Project object */;
 }

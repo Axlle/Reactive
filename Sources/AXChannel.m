@@ -12,7 +12,7 @@
 #import "AXStreamObservation.h"
 #import "AXSignalDidChangeEvent.h"
 
-@implementation AxChannel {
+@implementation AXChannel {
     id _value;
     AXStream *_changeStream;
     __weak id<AXSignal> _source;
@@ -85,12 +85,12 @@
 }
 
 - (void)unobserveSource {
-    [_source.changeStream cancelObservation:_sourceObservation];
+    [_source.changeStream cancelTokenObservation:_sourceObservation];
 }
 
 - (void)observeSource {
     __weak AXChannel *weakSelf = self;
-    _sourceObservation = [_source.changeStream observationWithBlock:^(AXSignalDidChangeEvent *event) {
+    _sourceObservation = [_source.changeStream tokenObservationWithBlock:^(AXSignalDidChangeEvent *event) {
         AXChannel *strongSelf = weakSelf;
         strongSelf->_value = event.value;
         [strongSelf sendEvent:event];

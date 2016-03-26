@@ -24,7 +24,7 @@
 - (instancetype)init;
 
 - (void)observeWithBlock:(void (^)(id event))block;
-- (StreamObservation *)tokenObservationWithBlock:(void (^)(id event))block;
+- (AXStreamObservation *)tokenObservationWithBlock:(void (^)(id event))block;
 - (void)cancelTokenObservation:(AXStreamObservation *)observation;
 
 - (void)sendEvent:(id)event;
